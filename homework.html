@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .header{
+            background-color: #272626;
+            padding: 15px 0;
+        }
+        .header .wrap{
+            width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+        }
+        .header .tel p{
+            display: inline;
+            color: #fff;
+            font-size: 20px;
+        }
+        .header .pic a{
+            text-decoration: none;
+        }
+        .nav{
+            width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            padding:25px 0;
+           
+            background-color: #fff;
+        }
+        .nav .logo{
+           display: flex;
+           align-items: center;
+           color: #535353;
+        }
+        .nav .logo h1{
+            font-size: 50px;
+        }
+        .nav a{
+            text-decoration: none;
+            font-size: 18px;
+            color: #000;
+            margin: 30px;
+            padding: 10px 0;
+        }
+        .nav a:hover{
+            border-bottom: 3px #FF9933 solid;
+            transition: .5s;
+        }
+        .nav button{
+            color: #FF9933;
+            padding: 13px 30px;
+            background-color: #FFF;
+            border: 1px solid #FF9933;
+            font-size: 13px;
+        }
+        .nav button:hover{
+            background-color: #7abee9;
+            color: #fff;
+            border: none;
+        }
+        .banner{
+            background:url("Pic/asset 9.jpeg") center center;
+            width: 100%;
+            height: 90vh;
+        }
+        .banner .txt{
+            width: 1200px;
+            height: 100vh;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .banner .txt h1{
+            color: #535353;
+            font-size: 50px;
+        }
+        .banner .txt p:nth-child(2) {
+            color: #7abee9;
+            font-size: 80px;
+        }
+        .banner .txt p:nth-child(3){
+            font-size: 24px;
+        }
+        /* .banner .txt  */
+        button{
+            background-color: #FF9933;
+            color: #fff;
+            padding: 20px 40px;
+            margin: 30px 0;
+            border: 1px solid #FF9933;
+            width: 200px;
+        }
+        button:hover{
+            background-color: #000;
+            border: none;
+        }
+
+        .aboutus{
+           display: flex;
+           align-items: center;
+           width: 1200px;
+           margin: auto;
+        }
+        .aboutus .txt h1{
+            color: #535353;
+            font-size: 50px;
+        }
+        .aboutus .txt h2{
+            font-size: 24px;
+            color: #7abee9;
+            margin: 20px 0;
+        }
+        .aboutus .txt p{
+            color: #8d8d8d;
+            margin: 20px 0;
+        }
+        .help-container{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        .help-container .txt{
+            padding: 50px 0;
+        }
+        .help-container .txt h1{
+            font-size: 50px;
+            color: #535353;
+        }
+        .help-container .txt h2{
+            font-size: 30px;
+            color: #7abee9;
+        }
+        .help-container .pic{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 100px;
+        }
+        .help-container .pic .item{
+            margin: 0 15px;
+            position: relative;
+        }
+        .help-container .pic .item img{
+            background-image: c;
+        }
+        .help-container .pic .item h3{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 50px;
+            font-size: 34px;
+            color: #fff;
+        }
+        .help-container .pic .item h3:hover{
+            color:#FF9933 ;
+        }
+        .save-animal{
+            padding: 50px 0;
+            width: 1200px;
+            margin: auto;
+        }
+        .save-animal .container{
+            display: flex;
+            justify-content: center;
+        }
+        .save-animal .container .item{
+            margin: 50px;
+        }
+        .container .item h1{
+            font-size: 50px;
+            color: #535353;
+            padding-bottom: 30px;
+            text-align: right;
+        }
+        .container .item p{
+            text-align: left;
+            color: #8d8d8d;
+            padding: 20px 0;
+        }
+        .save-animal .item{
+            position: relative;
+            margin: auto;
+        }
+        .save-animal .item .txt{
+            text-align: center;
+            position: absolute;
+           left: 0;
+           top: 60px;
+           right: 0;
+           margin: auto;
+           
+        }
+        .item .txt h1{
+            font-size: 50px;
+            color: #535353;
+        }
+        .item .txt h2{
+            font-size: 70px;
+            color: #7abee9;
+        }
+        .item .txt p{
+            font-size: 30px;
+        }
+
+        .dog-img{
+            background:url("Pic/asset 15.jpeg") center center;
+            width: 100%;
+            height: 90vh;
+            background-attachment:scroll;
+        }
+        .lasestnewsupdates{
+            width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .lasestnewsupdates .txt h1{
+            font-size: 50px;
+            color: #535353;
+        }
+        .lasestnewsupdates .txt h2{
+            color: #7abee9;
+            font-size: 30px;
+            padding: 20px 0;
+        }
+        .lasestnewsupdates embed{
+           width: 100%;
+           height: 100vh;
+        }
+        .lasestnewsupdates .container{
+            display: flex;
+            justify-content: center;
+            padding: 30px 0px;
+            
+        }
+        .lasestnewsupdates .container .item{
+            position: relative;
+            margin: 0 20px;
+        }
+        .lasestnewsupdates .container .content{
+            position: absolute;
+            top: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .lasestnewsupdates .content .pic img
+        {
+            border-radius: 50%;
+        }
+        .lasestnewsupdates .content .txt h1{
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .lasestnewsupdates .content .txt h2{
+            font-size: 30px;
+            color: #fff;
+            padding-top: 0;
+            
+        }
+        .lasestnewsupdates .content .txt h2:hover{
+            color: #FF9933;
+            transition: .5s;
+        }
+        
+        .petsawards .bgimg{
+            background-image: url("Pic/asset 18.jpeg") center;
+            width: 100%;
+            height: 100vh;
+            
+        }
+        .petsawards .pic{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .petsawards .container-item{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+        <div class="tel">
+        <p>Toll-free:</p>
+        <p>(123)456-7890</p>
+        </div>
+         <div class="pic">
+            <a href="#">
+                <img src="https://picsum.photos/20/20/?random=1">
+            </a>
+            <a href="#">
+                <img src="https://picsum.photos/20/20/?random=1">
+            </a>
+            <a href="#">
+                <img src="https://picsum.photos/20/20/?random=1">
+            </a>
+            <a href="#">
+                <img src="https://picsum.photos/20/20/?random=1">
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="nav">
+        <div class="logo">
+            <img src="Pic/asset 0.png" alt="">
+            <h1>Anilove</h1>
+        </div>
+        <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Events</a>
+        <a href="#">News</a>
+        <a href="#">Contacts</a>
+    </div>
+        <button>DONATE NOW!</button>
+    </div>
+    <div class="banner">
+        <div class="txt">
+            <h1>Animals Need</h1>
+            <p>YOUR Help!</p>
+            <p>You can chip in with money & effort!</p>
+            <button>
+                DONATE NOW!
+            </button>
+        </div>
+    </div>
+    <div class="aboutus">
+        <div class="pic">
+            <img src="Pic/asset 1.jpeg" alt="">
+        </div>
+        <div class="txt">
+            <h1>About Us</h1>
+            <h2>What Makes Us Care About Pets?</h2>
+            <p>If it wasn’t for our founder’s childhood spent on a ranch in northern Texas, surrounded by domestic animals and pets all the time till she went to college – there might have been no Anilove animal shelter now. So as soon as she graduated with her Veterinary degree 12 years ago, she already knew what she will be doing for a living.</p>
+            <p>
+                All in all, with thousands of animals saved off the streets and cared for every year, we hope to encourage much more pet adoptions to happen!
+            </p>
+            <button>
+                LEARN MORE!
+            </button>
+        </div>
+    </div>
+    <div class="help-container">
+        <div class="txt">
+            <h1>How You Can Help</h1>
+            <h2>There Are Countless Ways You Can Join In & Help Us!</h2>
+        </div>
+        <div class="pic">
+            <div class="item">
+                <img src="Pic/asset 10.jpeg" alt="">
+                <h3>Volunteer</h3>
+            </div>
+            <div class="item">
+                <img src="Pic/asset 11.jpeg" alt="">
+                <h3>Adopt</h3>
+            </div>
+            <div class="item">
+                <img src="Pic/asset 12.jpeg" alt="">
+                <h3>Sponsor</h3>
+            </div>
+        </div>
+    </div>
+    <div class="save-animal">
+        <div class="container">
+        <div class="item">
+            <h1>Volunteer to Save<br>
+                Animals Now!</h1>
+            <img src="Pic/asset 2.jpeg" alt="">
+        </div>
+        <div class="item">
+            <img src="Pic/asset 3.jpeg" alt="">
+            <p>With so many pets less fortunate than your cat and dog, there’s always something you can do about it!</p>
+            <button>
+                VOLUNTEER
+            </button>
+        </div>
+    </div>
+    <div class="item">
+        <div class="pic">
+        <img src="Pic/asset 13.jpeg" alt="">
+    </div>
+        <div class="txt">
+            <h1>Upcoming Events</h1>
+            <h2>Kennel Training Class</h2>
+            <p>FR, June 11th</p>
+            <button>
+                DETAILS
+            </button>
+            <button>
+                VIEW ALL
+            </button>
+        </div>
+    </div>
+    </div>
+    <div class="dog-img">
+    </div>
+    <div class="lasestnewsupdates">
+        <div class="txt">
+        <h1>Latest News & Updates</h1>
+        <h2>See a Video Review of Our Cutest Pets!</h2>
+        </div>
+        <!-- <video src="Pic/plaza_time_lapse-1.mp4"></video> -->
+        <embed wmode="transparent" src="Pic/plaza_time_lapse-1.mp4" type="">
+            <div class="container">
+                <div class="item">
+                    <img src="Pic/asset 16.jpeg" alt="">
+                    <div class="content">
+                        <div class="pic"><img src="Pic/asset 1.jpeg" alt=""
+                            width="100px" height="100px"></div>
+                        <div class="txt">
+                            <h1>18 Sept, by  Jennifer Moreno</h1>
+                            <h2>
+                                New Advancements in the<br> Veterinary Industry     
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="Pic/asset 17.jpeg" alt="">
+                    <div class="content">
+                        <div class="pic"><img src="Pic/asset 1.jpeg" alt=""
+                            width="100px" height="100px"></div>
+                        <div class="txt">
+                            <h1>18 Sept, by  Jennifer Moreno</h1>
+                            <h2>
+                                Do Dogs Hate It When You Hug <br> Them?
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="petsaeards">
+      <div class="bgimg">
+        <div class="item-wrap">
+          <div class="item">
+            <img src="Pic/mt-1614-content-img16.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="Pic/mt-1614-content-img15.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="Pic/mt-1614-content-img14.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="Pic/mt-1614-content-img13.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="petsawards">
+        <div class="bgc">
+        <img src="Pic/asset 18.jpeg" alt="">
+        </div>
+        <div class="container-item">
+    <div class="item">
+        <div class="pic">
+        <img src="Pic/mt-1614-content-img16.jpg" width="50px" height="50px" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div class="pic">
+        <img src="Pic/mt-1614-content-img15.jpg" width="50px" height="50px" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div class="pic">
+        <img src="Pic/mt-1614-content-img14.jpg" width="50px" height="50px" alt="">
+        </div>
+    </div>
+    <div class="item">
+        <div class="pic">
+        <img src="Pic/mt-1614-content-img13.jpg" width="50px" height="50px" alt="">
+        </div>
+    </div>
+</div>
+    </div> -->
+</body>
+</html>
