@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/05c128ff7b.js" crossorigin="anonymous"></script>
     <title>Home</title>
+
     <style>
         *{
             margin: 0;
@@ -21,23 +23,38 @@
             align-items: center;
             margin: auto;
         }
+        .header .wrap .pic i{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            color: #000;
+            background-color: #fff;
+            margin: 0 3px;
+            border-radius: 50%;
+        }
         .header .tel p{
             display: inline;
             color: #fff;
             font-size: 20px;
         }
+        .header .tel i{
+            color: #FF9933;
+        }
         .header .pic a{
             text-decoration: none;
         }
         .nav{
+           width: 100%;
+           background-color: #fff;
+        }
+        .nav-wrap{
             width: 1200px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: space-around;
             margin: auto;
             padding:25px 0;
-           
-            background-color: #fff;
         }
         .nav .logo{
            display: flex;
@@ -56,13 +73,12 @@
         }
         .nav a:hover{
             border-bottom: 3px #FF9933 solid;
-            transition: .5s;
         }
         .nav button{
             color: #FF9933;
             padding: 13px 30px;
             background-color: #FFF;
-            border: 1px solid #FF9933;
+            border: 3px solid #FF9933;
             font-size: 13px;
         }
         .nav button:hover{
@@ -153,9 +169,9 @@
             margin: 0 15px;
             position: relative;
         }
-        .help-container .pic .item img{
+        /* .help-container .pic .item img{
             background-image: c;
-        }
+        } */
         .help-container .pic .item h3{
             position: absolute;
             left: 0;
@@ -216,10 +232,12 @@
         }
 
         .dog-img{
-            background:url("Pic/asset 15.jpeg") center center;
+            background:url("Pic/asset 15.jpeg") no-repeat center center;
             width: 100%;
-            height: 90vh;
-            background-attachment:scroll;
+            height: 700px;
+            border-bottom: #FF9933 25px solid;
+            background-attachment: fixed;
+            background-size: cover;
         }
         .lasestnewsupdates{
             width: 1200px;
@@ -284,22 +302,161 @@
         
 
 
-        .petsawards {
-            width: 100%;
-        }
+        
         .petsawards .bgimg{
-            background-image: url("Pic/asset 18.jpeg") center;
+            background:url("Pic/asset 18.jpeg") center center;
             width: 100%;
-            height: 100vh;
+            height: 80vh;
+        }
+        .item-wrap{
+            width: 1200px;
+            height: 100%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .item-wrap .item h1{
+            color: #fff;
+            text-align: center;
+            font-size: 60px;
+            padding: 10px 0;
+        }
+        .item-wrap .item p{
+            color: #fff;
+            text-align: center;
+            font-size: 40px;
+        }
+        .seeinstagram .txt h1{
+            text-align: center;
+            padding: 40px 0;
+        }
+        .seeinstagram .item-group{
+            display: flex;
             
         }
-        .petsawards .pic{
-            position: absolute;
-            left: 0;
-            top: 0;
+        .seeinstagram .item-group .item{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            margin: auto;
         }
-        .petsawards .container-item{
+        .seeinstagram .item-group .item img{
+            vertical-align: bottom;
+        }
+        .seeinstagram .item-group .instagram:hover{
+            opacity: .6;
+        }
+       
+        .instagram
+        {
+            background-color: #FF9933;
+            opacity: 0;
+            /* display: none; */
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            text-align: center;
+        }
+        .instagram i{
             display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer{
+            background:url("Pic/asset 19.jpeg");
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            color: #fff;
+            padding: 50px 0;
+        }
+        .footer .biglogo{
+            padding: 10px 0;
+        }
+        .footer .biglogo a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 60px;
+            vertical-align:top;
+            margin: 0 15px;
+        }
+        .footer .link{
+            padding: 30px 0;
+        }
+        .footer .link i:nth-child(1){
+            color: #fff;
+            background-color: #44b1f5;
+            padding: 20px;
+        }
+        .footer .link i:nth-child(2){
+            color: #fff;
+            background-color: #4366b3;
+            padding: 20px;
+        }
+        .footer .link i:nth-child(3){
+            color: #fff;
+            background-color: #b9421d;
+            padding: 20px;
+        }
+        .footer .link i:nth-child(4){
+            color: #fff;
+            background-color: #145e8b;
+            padding: 20px;
+        }
+        .footer .txt p,address{
+            display: inline-block;
+            padding: 10px;
+        }
+        .footer .txt i{
+            color: #FF9933;
+        }
+        .footer .txt a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .footer .txt a:hover{
+            color: #FF9933;
+        }
+
+
+
+
+
+        @media screen and (max-width: 768px) {
+            .header .wrap{
+               display: inline;
+            }
+            .header .wrap .tel{
+                padding: 10px;
+            }
+            .header .wrap .pic{
+                text-align: center;
+            }
+
+
+            .nav-wrap{
+                display: inline-block;
+                width: 100%;
+                margin: auto;
+            
+            }
+            .menu{
+                display: none;
+            }
+
+
+
+            .banner .txt{
+                font-size: 36px;
+            }
         }
     </style>
 </head>
@@ -307,26 +464,28 @@
     <div class="header">
         <div class="wrap">
         <div class="tel">
+        <i class="fas fa-phone-alt"></i>
         <p>Toll-free:</p>
         <p>(123)456-7890</p>
         </div>
          <div class="pic">
             <a href="#">
-                <img src="https://picsum.photos/20/20/?random=1">
+                <i class="fab fa-twitter"></i>
             </a>
             <a href="#">
-                <img src="https://picsum.photos/20/20/?random=1">
+                <i class="fab fa-facebook-f"></i>
             </a>
             <a href="#">
-                <img src="https://picsum.photos/20/20/?random=1">
+                <i class="fab fa-pinterest"></i>
             </a>
             <a href="#">
-                <img src="https://picsum.photos/20/20/?random=1">
+                <i class="fab fa-linkedin"></i>
             </a>
         </div>
     </div>
     </div>
     <div class="nav">
+        <div class="nav-wrap">
         <div class="logo">
             <img src="Pic/asset 0.png" alt="">
             <h1>Anilove</h1>
@@ -339,6 +498,7 @@
         <a href="#">Contacts</a>
     </div>
         <button>DONATE NOW!</button>
+    </div>
     </div>
     <div class="banner">
         <div class="txt">
@@ -456,50 +616,75 @@
                 </div>
             </div>
     </div>
-    <div class="petsaeards">
+    <div class="petsawards">
       <div class="bgimg">
-    </div>
+    
         <div class="item-wrap">
           <div class="item">
-            <img src="Pic/mt-1614-content-img16.jpg" width="30px" height="30px" alt="">
+            <img src="Pic/01.jpg" alt="">
+            <h1>1000</h1>
+            <p>Pets</p>
           </div>
           <div class="item">
-            <img src="Pic/mt-1614-content-img15.jpg" width="30px" height="30px" alt="">
+            <img src="Pic/02.jpg" alt="">
+            <h1>20</h1>
+            <p>Awards</p>
           </div>
           <div class="item">
-            <img src="Pic/mt-1614-content-img14.jpg" width="30px" height="30px" alt="">
+            <img src="Pic/03.jpg" alt="">
+            <h1>100</h1>
+            <p>Staffers</p>
           </div>
           <div class="item">
-            <img src="Pic/mt-1614-content-img13.jpg" width="30px" height="30px" alt="">
+            <img src="Pic/04.jpg" alt="">
+            <h1>1200</h1>
+            <p>Contributors</p>
           </div>
         </div>
     </div>
-    <!-- <div class="petsawards">
-        <div class="bgc">
-        <img src="Pic/asset 18.jpeg" alt="">
+    </div>
+    <div class="seeinstagram">
+        <div class="txt">
+            <h1>See Our Adorable Pets @Instagram!</h1>
         </div>
-        <div class="container-item">
-    <div class="item">
         <div class="pic">
-        <img src="Pic/mt-1614-content-img16.jpg" width="50px" height="50px" alt="">
+            <div class="item-group">
+                <div class="item">
+                    <img src="Pic/asset 5.jpeg" width="100%" alt="">
+                    <div class="instagram"> <i class="fab fa-instagram fa-3x"></i></div>
+                </div>
+                <div class="item">
+                    <img src="Pic/asset 6.jpeg" width="100%"  alt="">
+                    <div class="instagram"> <i class="fab fa-instagram fa-3x"></i></div>
+                </div>
+                <div class="item">
+                    <img src="Pic/asset 7.jpeg" width="100%"  alt="">
+                   <div class="instagram"> <div class="instagram"> <i class="fab fa-instagram fa-3x"></i></div></div>
+                </div>
+                <div class="item">
+                    <img src="Pic/asset 8.jpeg" width="100%"  alt="">
+                    <div class="instagram"> <i class="fab fa-instagram fa-3x"></i></div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="item">
-        <div class="pic">
-        <img src="Pic/mt-1614-content-img15.jpg" width="50px" height="50px" alt="">
+    <div class="footer">
+        <div class="biglogo">
+            <img src="Pic/asset 0.png" alt="">
+            <a href="">Anilove</a>
+        </div>
+        <div class="link">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-pinterest"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+        <div class="txt">
+            <p>Paid for by the ConLiberal NATIONAL COMMITTEE</p><br>
+            <i class="fas fa-phone-alt"></i><p>(123) 456-7890</p><br>
+            <i class="fas fa-map-marker-alt"></i><address>ConLiberal NATIONAL COMMITTEE 430 South Capitol Street Southeast Washington, DC 20003</address>
+            <br>2020&copy;Anilove.  <a href="#">All rights reserved.</a>  
         </div>
     </div>
-    <div class="item">
-        <div class="pic">
-        <img src="Pic/mt-1614-content-img14.jpg" width="50px" height="50px" alt="">
-        </div>
-    </div>
-    <div class="item">
-        <div class="pic">
-        <img src="Pic/mt-1614-content-img13.jpg" width="50px" height="50px" alt="">
-        </div>
-    </div>
-</div>
-    </div> -->
 </body>
 </html>
