@@ -33,6 +33,10 @@
             margin: 0 3px;
             border-radius: 50%;
         }
+        .header .wrap .pic i:hover{
+            background-color:#FF9933 ;
+            transition: .8s;
+        }
         .header .tel p{
             display: inline;
             color: #fff;
@@ -47,6 +51,9 @@
         .nav{
            width: 100%;
            background-color: #fff;
+           position: sticky;
+           top: 0;
+           z-index: 1;
         }
         .nav-wrap{
             width: 1200px;
@@ -54,7 +61,7 @@
             align-items: center;
             justify-content: space-around;
             margin: auto;
-            padding:25px 0;
+            height: 100%;
         }
         .nav .logo{
            display: flex;
@@ -87,7 +94,7 @@
             border: none;
         }
         .banner{
-            background:url("Pic/asset 9.jpeg") center center;
+            background:url("Pic/asset 9.jpeg") center center no-repeat;
             width: 100%;
             height: 90vh;
         }
@@ -309,10 +316,20 @@
             border-radius: 50%;
         }
         .lasestnewsupdates .content .txt h1{
+            display: inline;
             font-size: 16px;
             color: #fff;
             text-align: center;
             padding: 10px 0;
+        }
+        .lasestnewsupdates .content .txt h1 p{
+            display: inline;
+            font-size: 16px;
+            color: #fff;
+        }
+        .lasestnewsupdates .content .txt h1 p:hover{
+            color: #FF9933;
+            transition: .5s;
         }
         .lasestnewsupdates .content .txt h2{
             font-size: 30px;
@@ -353,48 +370,51 @@
             font-size: 40px;
         }
         .seeinstagram .txt h1{
+            font-size: 50px;
             text-align: center;
             padding: 40px 0;
         }
+
         .seeinstagram .item-group{
             display: flex;
-            
         }
         .seeinstagram .item-group .item{
             width: 100%;
-            height: 100%;
             position: relative;
-            margin: auto;
+            
         }
         .seeinstagram .item-group .item img{
-            vertical-align: bottom;
+           vertical-align: bottom;
         }
-        .seeinstagram .item-group .instagram:hover{
-            background-color: rgba(255, 153, 51, .6);
-            opacity: .6;
-        }
-       
-        .instagram
-        {
-            
-            /* display: none; */
-            width: 100%;
-            height: 100%;
-            color: #fff;
+        .seeinstagram .item-group .item .instagram{
             position: absolute;
             top: 0;
+            bottom: 0;
             left: 0;
             right: 0;
-            bottom: 0;
             margin: auto;
-            text-align: center;
         }
-        .instagram i{
-            display: flex;
-            z-index: 1;
+        .seeinstagram .item-group .item .instagram i{
+            color: #fff;
             height: 100%;
+            display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            transition: .4s ease-in-out;
+
+            /* font-size: 0; */
+        }
+        .seeinstagram .item-group .item .instagram:hover{
+            background-color: rgba(255,153,51,.6);
+            opacity: 1;
+            /* font-size: 60px; */
+            /* transform: scale(1,2); */
+            transition: 1s;
+        }
+        .seeinstagram .item-group .item .instagram i:hover{
+            opacity: 1;
+            transform: scale(1.5,1.5);
         }
         .footer{
             background:url("Pic/asset 19.jpeg");
@@ -621,7 +641,7 @@
                         <div class="pic"><img src="Pic/asset 1.jpeg" alt=""
                             width="100px" height="100px"></div>
                         <div class="txt">
-                            <h1>18 Sept, by  Jennifer Moreno</h1>
+                            <h1>18 Sept, by  <p>Jennifer Moreno<p></h1>
                             <h2>
                                 New Advancements in the<br> Veterinary Industry     
                             </h2>
@@ -634,7 +654,7 @@
                         <div class="pic"><img src="Pic/asset 1.jpeg" alt=""
                             width="100px" height="100px"></div>
                         <div class="txt">
-                            <h1>18 Sept, by  Jennifer Moreno</h1>
+                            <h1>18 Sept, by <p>Jennifer Moreno<p></h1>
                             <h2>
                                 Do Dogs Hate It When You Hug <br> Them?
                             </h2>
@@ -678,7 +698,7 @@
             <div class="item-group">
                 <div class="item">
                     <img src="Pic/asset 5.jpeg" width="100%" alt="">
-                    <div class="instagram"> <i class="fab fa-instagram fa-3x"></i></div>
+                    <div class="instagram"></i><i class="fab fa-instagram fa-3x"></i></div>
                 </div>
                 <div class="item">
                     <img src="Pic/asset 6.jpeg" width="100%"  alt="">
@@ -704,7 +724,7 @@
             <i class="fab fa-twitter"></i>
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-pinterest"></i>
-            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-linkedin-in"></i>
         </div>
         <div class="txt">
             <p>Paid for by the ConLiberal NATIONAL COMMITTEE</p><br>
