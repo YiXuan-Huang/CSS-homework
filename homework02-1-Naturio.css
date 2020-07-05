@@ -71,7 +71,7 @@
     font-size: 14px;
 }
 .content .banner .bgc-img{
-    background:url("homework02-img/asset36.png") center center;
+    background:url("homework02-img/asset36.png") center center no-repeat;
     width: 100%;
     height: 100vh;
     position: relative;
