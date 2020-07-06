@@ -241,8 +241,8 @@ span#greenn{
 }
 .FruitandVegetablesbanner .width .txt{
     position: absolute;
-    top: 33%;
-    left: 30%;
+    top: 250px;
+    left: 350px;
 }
 .FruitandVegetablesbanner .width .txt h1{
     font-size: 82px;
@@ -308,7 +308,7 @@ span#greenn{
 .LatestfromtheBlog .width .title{
     position: absolute;
     font-family: 'Pacifico', cursive;
-    top: 20%;
+    top: 100px;
     left: 40%;
     font-size: 30px;
 }
