@@ -237,41 +237,43 @@ span#greenn{
     color: #679509;
 }
 .FruitandVegetablesbanner{
-    background: url("homework02-img/asset37.png") center center no-repeat;
-    width: 100%;
-    height: 100vh;
     position: relative;
-    text-align: center;
+    /* width: 100%; */
 }
-.FruitandVegetablesbanner .width{
-    width: 1200px;
-    margin: auto;
+.FruitandVegetablesbanner img{
+    width: 100%;
 }
-.FruitandVegetablesbanner .width .txt{
-    position: absolute;
-    top: 250px;
-    left: 350px;
+.FruitandVegetablesbanner .txt{
+text-align: center;
+width: 800px;
+height: 300px;
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0;
+left: 100px;
+margin: auto;
 }
-.FruitandVegetablesbanner .width .txt h1{
-    font-size: 82px;
-    color: #363636;
+.FruitandVegetablesbanner .txt h1{
+font-size: 82px;
+color: #363636;
 }
-.FruitandVegetablesbanner .width .txt h2{
-    font-family: 'Pacifico', cursive;
-    padding: 20px 0;
+.FruitandVegetablesbanner .txt h2{
+font-family: 'Pacifico', cursive;
+padding: 20px 0;
 }
 .FruitandVegetablesbanner .txt button{
-    background-color: #86ae34;
-    color: #fff;
-    padding: 20px 40px;
-    border: none;
+background-color: #86ae34;
+color: #fff;
+padding: 20px 40px;
+border: none;
 
-    background-size: 200% 100%;
-    background-image: linear-gradient(to right, #86ae34 50%, #000 50%);
-    transition: background-position .5s;
+background-size: 200% 100%;
+background-image: linear-gradient(to right, #86ae34 50%, #000 50%);
+transition: background-position .5s;
 }
 .FruitandVegetablesbanner .txt button:hover{
-    background-position:-100% 0; 
+background-position:-100% 0; 
 }
 .Lovevegitable .width{
     width: 1200px;
