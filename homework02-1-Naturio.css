@@ -154,10 +154,11 @@
     position: relative;
     z-index: -1;
 }
-.content .welcome-pic img::after{
+.content .welcome-pic img::before{
     content: '';
-    border: #f00 1px solid;
+    border: #f00 100px solid;
     position: absolute;
+    top: 0;left: 0;
 }
 .content .welcome-pic img:first-child:hover{
     border: 1px #ccc solid;
