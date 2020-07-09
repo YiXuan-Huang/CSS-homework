@@ -144,25 +144,17 @@
     line-height: 1.5;
 }
 .content .welcome-pic{
-    width: 1200px;
+    /* width: 100%; */
     display: flex;
-    margin: auto;
+    /* margin: auto; */
     margin: 100px 0 50px;
+    
 }
 .content .welcome-pic img{
     width: 100%;
-    position: relative;
-    z-index: -1;
+    
 }
-.content .welcome-pic img::before{
-    content: '';
-    border: #f00 100px solid;
-    position: absolute;
-    top: 0;left: 0;
-}
-.content .welcome-pic img:first-child:hover{
-    border: 1px #ccc solid;
-}
+
 .OurProducts .OurProducts-width{
     width: 1200px;
     margin: auto;
@@ -268,7 +260,6 @@ background-color: #86ae34;
 color: #fff;
 padding: 20px 40px;
 border: none;
-
 background-size: 200% 100%;
 background-image: linear-gradient(to right, #86ae34 50%, #000 50%);
 transition: background-position .5s;
