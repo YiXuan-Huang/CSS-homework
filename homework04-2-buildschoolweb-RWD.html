@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .hb{
+            width: 40px;
+            height: 40px;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+        .hb span{
+            width: 25px;
+            height: 3px;
+            background-color: #f00;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            transition: .3s;
+        }
+        .hb span:first-child{
+            transform: translateY(-6px);
+        }
+        .hb span:last-child{
+            transform: translateY(6px);
+        }
+        #menu-control{
+            display: none;
+        }
+        #menu-control:checked ~.hb span:nth-child(2){
+            display: none;
+        }
+        #menu-control:checked ~.hb span:first-child{
+            transform:translateY(0px) rotate(45deg); 
+            width: 28px;
+        }
+        #menu-control:checked ~.hb span:last-child{
+            transform:translateY(0px) rotate(-45deg);
+            width: 28px;
+        }
+        
+        .nav nav a{
+            
+            display: inline-block;
+            color: #000;
+            text-decoration: none;
+            /* display: block; */
+            padding: 10px 10px;
+            font-size: 20px;
+        
+        }
+        .nav nav li{
+            text-align: center;
+            
+        }
+        .nav nav li:first-child{
+            margin-top: 30px;
+        }
+        .nav nav li+li::before{
+            content: '';
+            width: 80%;
+            background-color: #000;
+            height: 1px;
+            display: block;
+            margin: auto;
+        }
+        nav{
+            background-color: #fff;
+            width: 40%;
+            height:100vh ;
+            bottom: 0;
+            position: fixed;
+            right: -100%;
+            transition: right 1s .2s;
+        }
+        #menu-control:checked ~nav{
+            right: 0;
+        }
+        #menu-control:checked ~.hb{
+            bottom: 20px;
+            transition:.1s;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .col-1{width: 8.333333%;}
+        .col-2{width: 16.666666%;}
+        .col-3{width: 25%;}
+        .col-4{width: 33.3333333%;}
+        .col-5{width: 41.6666666%;}
+        .col-6{width: 50%;}
+        .col-7{width: 58.33333%;}
+        .col-8{width: 66.666666%;}
+        .col-9{width: 75%;}
+        .col-10{width: 83.333333%;}
+        .col-11{width: 91.6666666%;}
+        .col-12{width: 100%;}
+
+        .HeaderandBanner{
+        }
+        body{
+            margin: auto;
+        }
+        .main-width{
+            /* width: 960px; */
+            margin: auto;
+            display: flex;
+            /* flex-wrap: wrap;  */
+            justify-content: space-between;
+            align-items: center;
+        }
+        .minor-width{
+            
+            /* width: 1200px; */
+            /* width: 100%; */
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            align-items: center;
+            justify-content: center;
+        }
+        .Header{
+            width: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 3;
+            /* width: 100%; */
+            margin:20px auto;
+            color: #f00;
+        
+        }
+        .Header .Logo{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            
+        }
+        .Header .Logo img{
+            width: 40px;
+            margin: 0 10px;
+            /* width: 54px; */
+        }
+        .Header .txt{
+            /* margin: 0 10px; */
+        }
+        .Header .Logo h1{
+            /* font-size: 30px; */
+        }
+        .Header .Logo p{
+            font-size: 9px;
+        }
+        .Header a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .Logo a{
+
+        }
+        .Header .nav{
+            /* display: none; */
+        }
+        /* .Header .nav a{
+            padding: 0 10px;
+            font-size: 13px;
+        } */
+        .Banner{
+            
+        }
+        .owl-nav{
+            height: 100%;
+            /* height: 100vh; */
+            /* width: 1200px; */
+            margin: auto;
+            font-size: 100px;
+            color: #f00;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            
+        }
+        .owl-nav button{
+            
+        }
+        .owl-dots{
+            position: relative;
+            
+        }
+        .owl-carousel{
+            /* position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: -1; */
+        }
+        .owl-carousel .owl-item img{
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover{
+            background: none;
+            color: #FFF;
+            text-decoration: none;
+        }
+        .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+            border: none;
+        }
+        .Banner .wrap{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        .Banner .txt{
+            color: #f00;
+        }
+        .Content{
+            margin: 50px 0;
+            text-align: center;
+        }
+        .Concept{
+            align-items: center;
+            /* line-height: 1.5; */
+            
+        }
+        .Content img{
+            width: 113px;
+        }
+        .Content .picandtxt,.onlytxt{
+            margin: 30px 0;
+            /* align-items: center; */
+            /* margin: 0 10px; */
+            /* padding: 0 50px; */
+            /* margin: 100px 0; */
+        }
+        .picandtxt .txt p,.onlytxt p{
+            text-align: left;
+            padding:10px 20px;
+            /* margin: 10px 0; */
+        }
+        .picandtxt .txt span{
+            text-decoration:underline;
+        }
+        .Content .Concept:nth-child(even) .picandtxt{
+            /* order: 1; */
+        }
+        .BlueSection .title{
+            background: url("homework04-img/asset 5.png");
+        }
+        .BlueSection .title h2{
+            color: #FFF;
+            /* padding: 50px 0; */
+            padding: 30px 10px;
+            background-color: rgba(33, 61, 102, 0.836);
+        }
+        .BlueSection .item-wrap{
+            margin: 50px auto;
+        }
+        .BlueSection:nth-child(2) .item{
+            /* width: 25%; */
+            padding: 0 20px;
+            margin:0 50px 100px;
+            line-height: 1.5;
+            /* margin: 0 30px; */
+            /* line-height: 1.5; */
+        }
+        .BlueSection:nth-child(2) .item img{
+            /* width: 100%; */
+            /* margin: 30px 0 10px; */
+            /* width: 90px; */
+            /* width: 180px; */
+        }
+        /* .BlueSection:nth-child(2) .item:nth-child(1) img{
+            width: 95px;
+            height: 95px;
+            
+        } */
+        .BlueSection:nth-child(2) .item:nth-child(2) img{
+            width: 70px;
+            height: 113px;
+        }
+        .BlueSection:nth-child(2) .item h3:nth-child(3){
+            color: #f50038;
+            margin: 10px 0;
+            /* margin: 20px 0; */
+        }
+        .BlueSection:nth-child(2) .item ul{
+            text-align: left;
+        }
+        .BlueSection:nth-child(3) .item{
+            /* width: 25%; */
+            padding: 0 10px;
+            margin: 30px;
+            line-height: 1.5;
+            /* margin: 0 30px; */
+            /* line-height: 1.5; */
+        }
+        .BlueSection:nth-child(3) .item h3{
+            margin: 20px 0;
+        }
+        .BlueSection:nth-child(3) .item p::before{
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #000;
+            display: inline-block;
+            
+        }
+        .BlueSection:nth-child(3) img{
+            width: 200px;
+            margin: 10px 30px;
+            /* margin: 0px 0; */
+        }
+        .BlueSection:nth-child(3) .item:nth-child(3) img:nth-child(2){
+            width: 55px;
+            height: 73px;
+        }
+        .BlueSection:nth-child(3) p{
+            text-align: left;
+        }
+        .BlueSection:nth-child(3) p::after{
+            content: '';
+            display: block;
+        }
+        .BlueSection:nth-child(4) .item img{
+            width: 180px;
+            vertical-align: middle;
+            /* margin: 20px 0; */
+        }
+        .Footer{
+            /* width: 100%; */
+            padding: 50px 10px;
+            border-top: 5px solid #555;
+            background-color: #ddd;
+            
+        }
+        .Footer .txtandcopyright{
+            align-items: flex-end;
+            flex-wrap: wrap;
+        }
+        .Footer .txt a:nth-child(3){
+            text-decoration: none;
+            color: #000;
+            font-size: 12px;
+        }
+        .Footer img{
+            width: 28px;
+            margin: 10px 5px 0;
+        }
+        .Footer .copyright{
+            /* font-size: 12px; */
+            /* text-align: left; */
+        }
+        .Footer .copyright a{
+            color: #000;
+        }
+
+
+        @media screen and (min-width: 768px){
+        .col-md-1{width: 8.333333%;}
+        .col-md-2{width: 16.666666%;}
+        .col-md-3{width: 25%;}
+        .col-md-4{width: 33.3333333%;}
+        .col-md-5{width: 41.6666666%;}
+        .col-md-6{width: 50%;}
+        .col-md-7{width: 58.33333%;}
+        .col-md-8{width: 66.666666%;}
+        .col-md-9{width: 75%;}
+        .col-md-10{width: 83.333333%;}
+        .col-md-11{width: 91.6666666%;}
+        .col-md-12{width: 100%;}
+        .Content .Concept:nth-child(even) .picandtxt{
+            order: 1;
+        }
+        .ContainerOurConcept{
+            padding:0 30px;
+            margin: 50px 0;
+        }
+        .minor-width{
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .BlueSection:nth-child(2) .item-wrap{
+            /* margin: 30px; */
+            margin: 20px;
+        }
+        .BlueSection:nth-child(2) .item {
+            /* width: 25%; */
+            padding: 0 0px;
+            margin:0 20px;
+            
+            /* line-height: 1.5; */
+            /* margin: 0 30px; */
+            /* line-height: 1.5; */
+        }
+        .BlueSection:nth-child(2) .item p{
+
+        }
+        .BlueSection:nth-child(3) .item {
+            padding: 0 0;
+            margin: 0 10px;
+        }
+        .BlueSection:nth-child(3) img{
+            width: 100px;
+            margin: 0 50;
+            height: 75px;
+            /* margin: 0px 0; */
+        }
+        .BlueSection:nth-child(3) .item:nth-child(3) img:nth-child(2){
+            width: 55px;
+            height: 73px;
+        }
+        .BlueSection:nth-child(3) p{
+            text-align: left;
+        }
+        .BlueSection:nth-child(3) p::after{
+            content: '';
+            display: block;
+        }
+        .Concept p{
+            /* font-size: 10px; */
+        }
+        nav{
+            
+        }
+        .minor-width{
+            /* justify-content: center; */
+        }
+        .nav nav{
+            display: flex;
+        }
+        .nav nav a{
+            color: #fff;
+            font-size: 16px;
+        }
+        .hb{
+            display: none;
+        }
+        nav{
+            
+            background-color: transparent;
+            width: auto;
+            height: 100%;
+            bottom: 0;
+            position: relative;
+            right: 0;
+        }
+        .nav nav li:first-child{
+            margin-top: 0px;
+        }
+        .nav nav li+li::before{
+            content: '';
+            background-color: transparent;
+            display: inline;
+
+        }
+        }
+        @media screen and (min-width: 992px){
+        .col-lg-1{width: 8.333333%;}
+        .col-lg-2{width: 16.666666%;}
+        .col-lg-3{width: 25%;}
+        .col-lg-4{width: 33.3333333%;}
+        .col-lg-5{width: 41.6666666%;}
+        .col-lg-6{width: 50%;}
+        .col-lg-7{width: 58.33333%;}
+        .col-lg-8{width: 66.666666%;}
+        .col-lg-9{width: 75%;}
+        .col-lg-10{width: 83.333333%;}
+        .col-lg-11{width: 91.6666666%;}
+        .col-lg-12{width: 100%;}
+        
+        }
+        @media screen and (min-width: 1200px){
+        .col-xl-1{width: 8.333333%;}
+        .col-xl-2{width: 16.666666%;}
+        .col-xl-3{width: 25%;}
+        .col-xl-4{width: 33.3333333%;}
+        .col-xl-5{width: 41.6666666%;}
+        .col-xl-6{width: 50%;}
+        .col-xl-7{width: 58.33333%;}
+        .col-xl-8{width: 66.666666%;}
+        .col-xl-9{width: 75%;}
+        .col-xl-10{width: 83.333333%;}
+        .col-xl-11{width: 91.6666666%;}
+        .col-xl-12{width: 100%;}
+        .main-width{
+            width: 960px;
+            margin: auto;
+            display: flex;
+            /* flex-wrap: wrap; */
+            justify-content: space-between;
+            align-items: center;
+        }
+        /* .minor-width{
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            /* flex-wrap: wrap; */
+            /* justify-content: space-between;
+            /* justify-content: center; 
+        } */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="HeaderandBanner">
+        <div class="Header">
+            <div class="main-width">
+            <div class="Logo">
+                <a href="#"><img src="homework04-img/asset 0.png" alt=""></a>
+                <div class="txt">
+                <a href="#"><h1>Build School</h1></a>
+                <a href="#"><p>developer career builder</p></a>
+                </div>
+            </div>
+            <div class="nav">
+                <input type="checkbox" name="" id="menu-control">
+                <label class="hb" for="menu-control">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <nav>
+                    <li><a href="#">台北班簡介</a></li>
+                    <li><a href="#">新竹班簡介</a></li>
+                    <li><a href="#">中華大學校內班簡介</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">歷屆老師</a></li>
+                    <li><a href="#">關於</a></li>
+                    <li><a href="#">問題及洽詢</a></li>
+                </nav>
+            </div>
+        </div>
+        </div>
+        <div class="Banner">
+            <div class="owl-carousel owl-theme">
+                <div class="item" data-merge="6">
+                    <img src="homework04-img/asset 1.png" alt="">
+                    <div class="wrap">
+                        <div class="txt">
+                            <h1>BUILD SCHOOL</h1>
+                            <p>Build School 是軟體開發教育的先鋒，為學生打造更有競爭力的職涯</p>
+                        </div>
+                        <div class="link">
+                            <a href="#">台北班簡介及報名(2020/10月後開課)</a>
+                            <a href="#">新竹班簡介(2020/12月後開課)</a>
+                            <a href="#">即刻報名 (中華大學學生)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel02.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel03.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel04.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel05.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel06.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel07.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel08.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel09.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="HeaderandBanner">
+        <div class="Header">
+            <div class="main-width">
+            <div class="Logo">
+                <a href="#"><img src="homework04-img/asset 0.png" alt=""></a>
+                <div class="txt">
+                <a href="#"><h1>Build School</h1></a>
+                <a href="#"><p>developer career builder</p></a>
+                </div>
+            </div>
+            <div class="nav">
+                <nav>
+                    <a href="#">台北班簡介</a>
+                    <a href="#">新竹班簡介</a>
+                    <a href="#">中華大學校內班簡介</a>
+                    <a href="#">Blog</a>
+                    <a href="#">歷屆老師</a>
+                    <a href="#">關於</a>
+                    <a href="#">問題及洽詢</a>
+                </nav>
+            </div>
+        </div>
+        </div>
+        <div class="Banner">
+            <div class="owl-carousel owl-theme">
+                <div class="item" data-merge="6">
+                    <img src="homework04-img/asset 1.png" alt="">
+                    <div class="wrap">
+                        <div class="txt">
+                            <h1>BUILD SCHOOL</h1>
+                            <p>Build School 是軟體開發教育的先鋒，為學生打造更有競爭力的職涯</p>
+                        </div>
+                        <div class="link">
+                            <a href="#">台北班簡介及報名(2020/10月後開課)</a>
+                            <a href="#">新竹班簡介(2020/12月後開課)</a>
+                            <a href="#">即刻報名 (中華大學學生)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel02.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel03.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel04.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel05.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel06.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel07.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel08.jpg" alt=""></div>
+                <div class="item" data-merge="6"><img src="homework04-img/Carousel09.jpg" alt=""></div>
+            </div>
+        </div>
+    </div> -->
+    <div class="Content">
+        <!-- 我們的理念 -->
+        <div class="ContainerOurConcept ">
+        <div class="Concept minor-width">
+            <!-- 第一個區塊 -->
+            <div class="picandtxt col-12 col-md-6 col-xl-6">
+                <div class="pic">
+                    <img src="https://picsum.photos/100/100/?random=1">
+                </div>
+                <div class="txt ">
+                    <h2>Build School</h2>
+                    <h2>/*我們的理念*/</h2>
+                    <p>Build = 將程式碼編譯及建置成<span>可執行的軟體</span><br>
+                        Build =<span> 動手做</span><br>
+                        Build = <span>軟體開發職涯的打造者</span><br>
+                    </p>
+                </div>
+            </div>
+            <div class="onlytxt col-12 col-md-6 col-xl-6">
+                <h3>實作及就業導向的軟體開發學校</h3>
+                <p>
+                    因應數位新時代的來臨，軟體、App、IoT 、SaaS、雲端平台的應用需求大爆炸，軟體工程師的招募需求持續上升，以2016年5月求職平台的統計資料，從高科技、電商、金融、傳產、網路服務、軟體資訊、新創等各行業，台灣至少有 27,000 位軟體開發工程師的職缺，甚至日本、新加坡等軟體及App 外商也來台灣求才。
+                    <br><br>
+                    為了彌補企業求才所需技能及實務教學上的落差，我們將前進校園，幫助想搭上軟體開發及互聯網經濟這艘火箭的同學們，打造更有競爭力的職涯!
+                </p>
+            </div>
+        </div>
+        <div class="Concept minor-width">
+            <!-- 第二個區塊 -->
+            <div class="picandtxt col-12 col-md-6 col-xl-6">
+                <div class="pic">
+                    <img src="homework04-img/asset 2.png">
+                </div>
+                <div class="txt">
+                    <h2>動手實作才是真學習</h2>
+                </div>
+            </div>
+            <div class="onlytxt col-12 col-md-6">
+                <h3>打造專案作品的學習方式<br>
+                    (Project-based Learning)</h3>
+                <p>
+                    透過身經百戰的實務講師、各大企業的資深軟體工程師或CTO，帶領同學實作一個真正能運作的產品開發，解決真實世界的問題，透過專題過程中的實作，培養解決問題的能力，這裏不只是程式教學或教育訓練，學的不只是技能，而是 Learn how to learn，以因應變化多端的軟體開發技能，及自我尋找解答的能力。
+                </p>
+            </div>
+        </div>
+        <div class="Concept minor-width">
+            <!-- 第三個區塊 -->
+            <div class="picandtxt col-12 col-md-6 col-xl-6">
+                <div class="pic">
+                    <img src="homework04-img/asset 3.png">
+                </div>
+                <div class="txt">
+                    <h2>就業銜接</h2>
+                </div>
+            </div>
+            <div class="onlytxt col-12 col-md-6">
+                <h3>真正企業職場所需技能<br>
+                    (Career Readiness)</h3>
+                <p>
+                    除了透過打造專題作品過程，學到了技術及硬技能外，不同於一般的軟體培訓，我們更加入了簡報技巧、履歷及面試準備、以及真正軟體開發的團隊溝通及運作，這些軟實力 (Soft-Skill) 的培養，讓同學能提早做好準備，在職場上成為一位專業的軟體工程師!
+                </p>
+            </div>
+        </div>
+        <div class="Concept minor-width">
+            <!-- 第四個區塊 -->
+            <div class="picandtxt col-12 col-md-6 col-xl-6">
+                <div class="pic">
+                    <img src="homework04-img/asset 4.png">
+                </div>
+                <div class="txt">
+                    <h2>連結及影響力</h2>
+                </div>
+            </div>
+            <div class="onlytxt col-12 col-md-6">
+                <h3>企業導師的連結<br>
+                    (Mentor Network)</h3>
+                <p>
+                    每一位在軟體開發上有實務經驗的企業導師，他們是各大企業的主管、資深軟體工程師或 CTO，其人際連結及資源將帶給同學更多更好的就業機會，你將比別人站得更高，看得更遠!
+                </p>
+            </div>
+        </div>
+        </div>
+        <!-- 18 - 24週 -->
+        <div class="BlueSection">
+            <div class="title">
+                <h2>
+                    18 - 24週的實作及作品開發 - 從訓練、就業、到企業連結
+                </h2>
+            </div>
+            <div class="item-wrap minor-width">
+            <div class="item col-12 col-md-3">
+                <h3>第 1 - 4 個月</h3>
+                <img src="homework04-img/asset 28.png" alt="">
+                <h3>程式基礎教學</h3>
+                <ul>
+                    <li>業界實戰講師</li>
+                    <li>企業主管/創業家/CTO 演講</li>
+                </ul>
+            </div>
+            <div class="item col-12 col-md-3">
+                <h3>第 5 - 6 個月</h3>
+                <img src="homework04-img/a9ner-wwrvj.png">
+                <h3>作品導向實作</h3>
+                <ul>
+                    <li>Web / App 作品開發 - 企業導師指導</li>
+                    <li>不只是 Demo - 真實可運作成果</li>
+                    <li>團隊開發 - 真實軟體開發團隊的運作及分工 (Agile 敏捷, kanban 看板, CI 自動化建置 ...)</li>
+                </ul>
+            </div>
+            <div class="item col-12 col-md-3">
+                <h3>第 6 - 7 月</h3>
+                <img src="homework04-img/akpwv-psu30.png" alt="">
+                <h3>作品發表</h3>
+                <ul>
+                    <li>簡報及溝通技巧</li>
+                    <li>作品及程式碼講解</li>
+                    <li>個人履歷準備 – Github, codepen …</li>
+                </ul>
+            </div>
+            <div class="item col-12 col-md-3">
+                <h3>未來及展望</h3>
+                <img src="homework04-img/axrv1-e17lc.png">
+                <h3>就業及企業導師諮詢</h3>
+                <ul>
+                    <li>就業媒合或未來職涯諮詢</li>
+                    <li>企業導師 -人際連結及資源</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+        <!-- 在課程及作品實作中，將採用這些工具 -->
+        <div class="BlueSection">
+            <div class="title">
+                <h2>
+                    在課程及作品實作中，將採用這些工具 - 熟悉實務上軟體開發團隊的運作、分工及真實專案的流程  
+                </h2>
+            </div>
+            <div class="item-wrap minor-width">
+            <div class="item col-12 col-md-3">
+                <img src="homework04-img/asset 8.jpg" alt="">
+                <img src="homework04-img/asset 9.jpg" alt="">
+                <h3>版本控管及程式碼管理</h3>
+                <p>
+                    學員之練習及作品之程式碼，皆採用主流的 git 當版本控管，熟悉版控的各種操作及實務專案運用; 課程中公開之練習程式碼，提交至 GitHub 上，其它學員可參考或供講師 Code Review 檢閱，並熟悉 Open Source 生態及工具
+                </p>
+            </div>
+            <div class="item col-12 col-md-3">
+                <img src="homework04-img/asset 10.jpg" alt="">
+                <img src="homework04-img/asset 11.jpg" alt="">
+                <h3>作品開發及團隊管理</h3>
+                <p>
+                    除了使用 GitHub 外，專題開發階段也將使用 Microsoft Azure DevOps Services (原名Visual Studio Team Services) 進行團隊開發、包括程式碼管理、工作項目追蹤、自動化建置等，熟悉一個軟體開發專案之流程、分工及日常工作。
+                </p>
+                <p>
+                    也可透過目前許多開發團隊常用的專案管理及看板工具 - Trello，進行工作分派、追蹤、或整個班的工作事項管理
+                </p>
+            </div>
+            <div class="item col-12 col-md-3">
+                <img src="homework04-img/asset 12.jpg" alt="">
+                <img src="homework04-img/asset 13.png" alt="">
+                <h3>雲端平台及服務</h3>
+                <p>
+                    雲端平台的使用已逐漸成為一個成熟軟體開發團隊之基礎，並讓開發、測試、佈署工作更加的便利及自動化。因此學員將使用 Microsoft Azure 當成作品及專案應用系統執行的雲端平台，包括 Azure App Service 建立網站服務、Azure SQL Database 建立資料庫服務
+                </p>
+            </div>
+            <div class="item col-12 col-md-3">
+                <img src="homework04-img/asset 14.png" alt="">
+                <img src="homework04-img/asset 15.jpg" alt="">
+                <h3>團隊溝通協作及通知</h3>
+                <p>
+                    課程過程中的線上討論、遠端溝通、或技術分享，將可透過 Microsoft Teams 或Slack 工具。另外練習的程式碼提交至 GitHub、或是 Trello 上的工作狀態更新，或是 Azure DevOps 上自動化建置的狀態，皆可發通知至 Microsoft Teams 或 Slack，透過自動化提升工作效率，並熟悉一個軟體開發團隊的協同合作
+                </p>
+            </div>
+            </div>
+        </div>
+        <!-- 我們的講師 -->
+        <div class="BlueSection">
+            <div class="title">
+                <h2>
+                    我們的講師及企業導師擁有在這些公司的工作經歷、擔任主管或資深工程師
+                </h2>
+            </div>
+            <div class="item-wrap minor-width">
+            <div class="item">
+                <img src="homework04-img/asset 17.png" alt="">
+                <img src="homework04-img/asset 18.png" alt="">
+            </div>
+            <div class="item">
+                <img src="homework04-img/asset 19.png" alt="">
+                <img src="homework04-img/asset 20.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="homework04-img/asset 21.jpg" alt="">
+                <img src="homework04-img/asset 22.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="homework04-img/asset 24.jpg" alt="">
+                <img src="homework04-img/asset 23.png" alt="">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="Footer">
+        <div class="txtandcopyright main-width">
+        <div class="txt col-12">
+            <h3>合作及接洽</h3>
+            <span>有興趣軟體工程師徵才、或成為我們的講師或<br>
+                擔任指導學生的企業導師 (Inspire Mentor)，<br>
+                請與我們連絡<br></span>
+            <a href="mailto:contact@build-school.com">
+                email: contact@build-school.com 電話: 02-66057606
+            </a>
+            <address>
+                ​台北: 台北市忠孝東路三段96號11F-1 
+                (台北科大對面/忠孝新生站3號出口)
+            </address>
+            <address>
+                新竹: 中華大學行政大樓圖資處
+            </address>
+            <a href="#"><img src="homework04-img/asset 25.png" alt=""></a>
+            <a href="#"><img src="homework04-img/asset 26.jpg" alt=""></a>
+        </div>
+        <div class="copyright col-12">
+            <a href="#">隱私權宣告</a> &copy;2020 by Build School
+        </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+        items:4,
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:5000,
+        autoplayHoverPause:true,
+        nav:true,
+    });
+        $('.play').on('click',function(){
+        owl.trigger('play.owl.autoplay',[1000])
+    })
+        $('.stop').on('click',function(){
+        owl.trigger('stop.owl.autoplay')
+    })
+        </script>
+</body>
+</html>

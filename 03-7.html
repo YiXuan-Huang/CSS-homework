@@ -107,17 +107,19 @@
             top: 390px;
             left: 50px;
         }
-        .innovation h4{
+        .innovation span{
             color: #a00;
-            padding: 10px 0;
+            display: flex;
+            align-items: center;
         }
-        .innovation h4::after{
+        .innovation span::after{
             content: '';
-            display: inline-block;
-            width: 470px;
+            display: block;
+            width: 20px;
             height: 1px;
-            vertical-align: middle;
             background-color: #a00;
+            flex-grow: 1;
+            
         }
         .innovation h5{
             display: inline-block;
@@ -167,11 +169,11 @@
         <div class="title">
                 <h1>五大優勢</h1>
             <nav>
-                <button>操控樂趣</button>
-                <button>安全守護</button>
-                <button>乘坐舒適</button>
-                <button>以人為本</button>
-                <button>引以為傲</button>
+                <button><a href="#">操控樂趣</a></button>
+                <button><a href="#">安全守護</a></button>
+                <button><a href="#">乘坐舒適</a></button>
+                <button><a href="#">以人為本</a></button>
+                <button><a href="#">引以為傲</a></button>
             </nav>
         </div>
         <!-- 第一區塊 -->
@@ -201,15 +203,13 @@
                 </div>
             </div>
                 <div class="innovation">
-                    <ul>
-                    <h4>因為我們做了這些革新</h4>
+                    <span>因為我們做了這些革新</span>
                     <h5>低重心設計</h5>
-                    <li>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</li>
+                    <p>透過低重心設計，不僅呈現更低伏的外觀，更能減少車身側傾，保持高速行駛穩定性。</p>
                     <h5>車體剛性強化</h5>
-                    <li>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</li>
+                    <p>車身結構採用超高強度鋼材，提高車輛穩定性，同時藉由雷射強化焊接技術，大幅增加焊點數量，提升車身抗扭剛性，強化駕馭穩定性及安全性。</p>
                     <h5>高性能懸吊</h5>
-                    <li>TNGA透過懸吊的高承載強度及完美懸吊幾何設定，保持輪胎貼地性，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭體驗。</li>
-                    </ul>
+                    <p>TNGA透過懸吊的高承載強度及完美懸吊幾何設定，保持輪胎貼地性，同時兼顧轉向靈敏度與清晰路感回饋，提升駕馭體驗。</p>
             </div>
             
         </div>
