@@ -1,0 +1,1532 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><meta name="naver-site-verification" content="2c67c201f0e7a4c328de35eec254a6c324a14699"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><!--PG크로스브라우징필수내용 시작--><meta http-equiv="Cache-Control" content="no-cache"/><meta http-equiv="Expires" content="0"/><meta http-equiv="Pragma" content="no-cache"/><!--PG크로스브라우징필수내용 끝--><!--모바일 디바이스 뷰포트 설정 --><meta name="viewport" content="width=1050, user-scalable=yes"/><!--해당 CSS는 쇼핑몰 전체 페이지에 영향을 줍니다. 삭제와 수정에 주의해주세요.--><!-- 스마트디자인에서는 JQuery 1.4.4 버전이 내장되어있습니다. 추가로 호출하면 충돌이 생길 수 있습니다. --><script type="text/javascript" src="/ec-js/common.js"></script><!-- 해당 JS는 플래시를 사용하기 위한 스크립트입니다. --><link href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" rel="stylesheet" type="text/css"/><link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i" rel="stylesheet"/><link href="https://fonts.googleapis.com/css?family=Open+Sans:700,700i,800,800i" rel="stylesheet"/><link rel="canonical" href="http://taken.co.kr/" />
+<link rel="alternate" href="http://m.taken.co.kr/" />
+<meta property="og:url" content="http://taken.co.kr/" />
+<meta property="og:site_name" content="TAKEN" />
+<meta property="og:type" content="website" />
+<link rel="shortcut icon" href="/web/upload/favicon_20180830122640.ico" />
+<meta http-equiv="ImageToolbar" content="No">
+<script type="text/javascript" src="/app/Eclog/js/cid.generate.js?vs=3d0b473968a0ec4ec41e3bf59df3aa51"></script>
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+
+            <script type='text/javascript'>
+                var EC_FRONT_EXTERNAL_SCRIPT_VARIABLE_DATA = {"common_member_id_crypt":""};
+            </script>
+            
+<script type="text/javascript">var EC_SDE_SHOP_NUM = 1;var SHOP = {getLanguage : function() { return "ko_KR"; },getCurrency : function() { return "KRW"; },getFlagCode : function() { return "KR"; },getTimezone: function() { return "Asia/Seoul" },isMultiShop : function() { return false; },isDefaultShop : function() { return true; },isDefaultLanguageShop : function(sLanguageCode) { return SHOP.isDefaultShop() && SHOP.isLanguageShop(sLanguageCode); },isKR : function() { return true; },isUS : function() { return false; },isJP : function() { return false; },isCN : function() { return false; },isTW : function() { return false; },isES : function() { return false; },isPT : function() { return false; },isVN : function() { return false; },isPH : function() { return false; },isLanguageShop : function(sLanguageCode) { return sLanguageCode === "ko_KR"; },getDefaultShopNo : function() { return 1; },getProductVer : function() { return 2; },isSDE : function() { return true; },isMode : function() {return false; },isMobileAdmin : function() {return false; },isExperienceMall : function() { return false; },getAdminID : function() {return ''},getMallID : function() {return 'takenstore'},getCurrencyFormat : function(sPriceTxt, bIsNumberFormat) { 
+        sPriceTxt = String(sPriceTxt);
+
+        var aCurrencySymbol = ["","\uc6d0",false];
+
+        if (typeof SHOP_PRICE !== 'undefined' && isNaN(sPriceTxt.replace(/[,]/gi, '')) === false && bIsNumberFormat === true) {
+            // bIsNumberFormat 사용하려면 Ui(':libUipackCurrency')->plugin('Currency') 화폐 라이브러리 추가 필요
+            sPriceTxt = SHOP_PRICE.toShopPrice(sPriceTxt.replace(/[,]/gi, ''), true, EC_SDE_SHOP_NUM);
+        }
+
+        return aCurrencySymbol[0] + sPriceTxt + aCurrencySymbol[1];
+        }};var EC_COMMON_UTIL = {convertSslForString : function(sString) { return sString.replace(/http:/gi, '');},convertSslForHtml : function(sHtml) { return sHtml.replace(/((?:src|href)\s*=\s*['"])http:(\/\/(?:[a-z0-9\-_\.]+)\/)/ig, '$1$2');},getProtocol : function() { return 'http'; },moveSsl : function() { if (EC_COMMON_UTIL.getProtocol() === 'http') { var oLocation = jQuery(window.location); var sUrl = 'https://' + oLocation.attr('host') + oLocation.attr('pathname') + oLocation.attr('search'); window.location.replace(sUrl); } },setEcCookie : function(sKey, sValue, iExpire) {var exdate = new Date();exdate.setDate(exdate.getDate() + iExpire);var setValue = escape(sValue) + "; domain=." + EC_GLOBAL_INFO.getBaseDomain() + "; path=/;expires=" + exdate.toUTCString();document.cookie = sKey + "=" + setValue;}};var EC_SHOP_LIB_INFO = {getBankInfo : function() { 
+            var oBankInfo = "";
+            $.ajax({
+                type: "GET",
+                url: "/exec/front/Shop/Bankinfo",
+                dataType: "json",
+                async: false,
+                success: function(oResponse) {
+                    oBankInfo = oResponse;
+                }
+             });
+             return oBankInfo; }};</script><script type="text/javascript">            var EC_ROOT_DOMAIN = "cafe24.com";
+            var EC_TRANSLATE_LOG_STATUS = "F";
+            var EC_GLOBAL_INFO = (function() {
+                var oData = {"base_domain":"takenstore.cafe24.com","root_domain":"cafe24.com","is_global":false,"country_code":"KR","language_code":"ko_KR","admin_language_code":"ko_KR"};
+                
+                return {
+                    getBaseDomain: function() {
+                        return oData['base_domain'];
+                    },
+
+                    getRootDomain: function() {
+                        return oData['root_domain'];
+                    },
+
+                    isGlobal: function() {
+                        return oData['is_global'];
+                    },
+
+                    getCountryCode: function() {
+                        return oData['country_code'];
+                    },
+
+                    getLanguageCode: function() {
+                        return oData['language_code'];
+                    },
+                    
+                    getAdminLanguageCode: function() {
+                        return oData['admin_language_code'];
+                    }
+                };
+            })();</script><script type="text/javascript" src="/ind-script/moment.php?convert=T"></script><script type="text/javascript">            var EC_GLOBAL_DATETIME = (function() {
+                var oConstants = {"STANDARD_DATE_REGEX":"\/([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))\/","IN_ZONE":"inZone","OUT_ZONE":"outZone","IN_FORMAT":"inFormat","OUT_FORMAT":"outFormat","IN_DATE_FORMAT":"inDateFormat","IN_TIME_FORMAT":"inTimeFormat","OUT_DATE_FORMAT":"outDateFormat","OUT_TIME_FORMAT":"outTimeFormat","IN_FORMAT_DATE_ONLY":1,"IN_FORMAT_TIME_ONLY":2,"IN_FORMAT_ALL":3,"OUT_FORMAT_DATE_ONLY":1,"OUT_FORMAT_TIME_ONLY":2,"OUT_FORMAT_ALL":3,"DATE_ONLY":"YYYY-MM-DD","TIME_ONLY":"HH:mm:ss","FULL_TIME":"YYYY-MM-DD HH:mm:ss","ISO_8601":"YYYY-MM-DD[T]HH:mm:ssZ","YEAR_ONLY":"YYYY","MONTH_ONLY":"MM","DAY_ONLY":"DD","WEEK_ONLY":"e","TIME_H_I_ONLY":"HH:mm","TIME_HOUR_ONLY":"HH","TIME_MINUTE_ONLY":"mm","POSTGRE_FULL_TIME":"YYYY-MM-DD HH24:MI:SS","POSTGRE_TIME_ONLY":" HH24:MI:SS","MICRO_SECOND_ONLY":"u","SEOUL":"Asia\/Seoul","TOKYO":"Asia\/Tokyo","SHANGHAI":"Asia\/Shanghai","TAIPEI":"Asia\/Taipei","HANOI":"Asia\/Bangkok","LOS_ANGELES":"America\/Los_Angeles","LISBON":"Europe\/Lisbon","MADRID":"Europe\/Madrid","MANILA":"Asia\/Manila","UTC":"Etc\/UTC","MAX_DATETIME":"9999-12-31 23:59:59"};
+                var oOptions = {"inZone":"Asia\/Seoul","inFormat":"YYYY-MM-DD HH:mm:ss","inDateFormat":"YYYY-MM-DD","inTimeFormat":"HH:mm:ss","outZone":"Asia\/Seoul","outFormat":"YYYY-MM-DD HH:mm:ss","outDateFormat":"YYYY-MM-DD","outTimeFormat":"HH:mm:ss"};
+                var oPolicies = {"shop":{"outZone":"Asia\/Seoul","outFormat":"YYYY-MM-DD HH:mm:ss","outDateFormat":"YYYY-MM-DD","outTimeFormat":"HH:mm:ss"}};
+                var sOverrideTimezone = '';
+                var sMomentNamespace = 'EC_GLOBAL_MOMENT';
+                
+                var fMomentLoaded = function() {
+                    var bMomentLoaded = !!window[sMomentNamespace];
+                    var bMomentTZLoaded = false;
+                    if (bMomentLoaded) {
+                        bMomentTZLoaded = !!window[sMomentNamespace].tz;
+                    }
+                    
+                    return bMomentLoaded && bMomentTZLoaded;
+                };
+                
+                var fMomentWrapper = function() {
+                    return window[sMomentNamespace];
+                };
+                
+                var fShallowMerge = function(oTarget, oSource) {
+                    oSource = oSource || {};
+                    for (var sKey in oSource) {
+                        if (oSource.hasOwnProperty(sKey)) {
+                            oTarget[sKey] = oSource[sKey];
+                        }
+                    }
+                    
+                    return oTarget;
+                };
+                
+                var getFormatFromFlag = function(oOptions, iFlag, bOpposite) {
+                    if (bOpposite) {
+                        switch (iFlag) {
+                            case 1:
+                                return oOptions[oConstants.IN_DATE_FORMAT];
+                            case 2:
+                                return oOptions[oConstants.IN_TIME_FORMAT];
+                            default:
+                                return oOptions[oConstants.IN_FORMAT];    
+                        }
+                    }
+                    
+                    switch (iFlag) {
+                        case 1:
+                            return oOptions[oConstants.OUT_DATE_FORMAT];
+                        case 2:
+                            return oOptions[oConstants.OUT_TIME_FORMAT];
+                        default:
+                            return oOptions[oConstants.OUT_FORMAT];
+                    }
+                };
+                              
+                return {
+                    'const': oConstants,
+                    
+                    init: function(fCallback) {
+                        if (fMomentLoaded()) {
+                            if (typeof fCallback === 'function') {
+                                fCallback();
+                            }
+                            
+                            return;
+                        }
+                        
+                        var oScript = document.createElement('script');
+                        oScript.type = 'text/javascript';
+                        oScript.async = true;
+                        oScript.src = '/ind-script/moment.php?convert=T';
+                        oScript.onload = oScript.onreadystatechange = function () {
+                            fMomentWrapper().defaultFormat = oOptions[oConstants.OUT_FORMAT];
+                            fMomentWrapper().tz.setDefault(oOptions[oConstants.IN_ZONE]);
+                            
+                            if (typeof fCallback === 'function') {
+                                fCallback();
+                            }
+                        };
+                        
+                        var oFirstScript = document.getElementsByTagName('script')[0];
+                        oFirstScript.parentNode.insertBefore(oScript, oFirstScript);
+                    },
+                    
+                    initPromise: function() {
+                        if (!window.Promise) {
+                            return;
+                        }
+                        
+                        return new Promise(function(resolve) {
+                            this.init(resolve);
+                        }.bind(this));
+                    },
+                    
+                    isLoaded: function() {
+                        return fMomentLoaded();
+                    },
+                                    
+                    setOptions: function(oNewOptions) {
+                         if (typeof oNewOptions === 'object') {
+                             for (var sKey in oNewOptions) {
+                                 if (oNewOptions.hasOwnProperty(sKey) && oOptions.hasOwnProperty(sKey)) {
+                                     oOptions[sKey] = oNewOptions[sKey];
+                                 }
+                             }
+                         }
+                         
+                         return this;
+                    },
+                    
+                    now: function(mOptions, iFlag) {
+                        if (fMomentLoaded() === false) {
+                            return Math.floor(new Date().getTime() / 1000);
+                        }
+                        
+                        var oFormatOptions = this.getOptions(mOptions);
+                        return fMomentWrapper()()
+                            .tz(oFormatOptions.outZone)
+                            .format(getFormatFromFlag(oFormatOptions, iFlag));
+                    },
+                    
+                    format: function(sTime, mOptions, iFlag) {
+                        if (fMomentLoaded() === false) {
+                            return sTime;
+                        }
+                        
+                        var oFormatOptions = this.getOptions(mOptions);
+                        return fMomentWrapper()
+                            .tz(sTime, oFormatOptions.inZone)
+                            .tz(oFormatOptions.outZone)
+                            .format(getFormatFromFlag(oFormatOptions, iFlag));
+                    },
+                    
+                    parse: function(sTime, mOptions) {
+                        if (fMomentLoaded() === false) {
+                            return sTime;
+                        }
+                        
+                        var oParseOptions = this.getOptions(mOptions);
+                        return fMomentWrapper().tz((sTime || new Date()), oParseOptions.inZone).tz(oParseOptions.outZone);
+                    },
+                    
+                    getOptions: function(mOptions, iFlag) {
+                        mOptions = mOptions || {};
+                      
+                        var oMergedOptions = fShallowMerge({}, oOptions);
+                        if (typeof mOptions === 'string' && oPolicies[mOptions]) {
+                            oMergedOptions = fShallowMerge(oMergedOptions, oPolicies[mOptions]);
+                        } else if (typeof mOptions === 'object') {
+                            oMergedOptions = fShallowMerge(oMergedOptions, mOptions);
+                        }
+                        
+                        if (sOverrideTimezone) {
+                            if ((typeof mOptions === 'string' && mOptions === 'shop') || (typeof mOptions === 'object' && !mOptions[oConstants.OUT_ZONE])) {
+                                oMergedOptions[oConstants.OUT_ZONE] = sOverrideTimezone;
+                            }
+                        }
+                        
+                        return oMergedOptions;
+                    },
+                    
+                    getRevertOptions: function(mOptions) {
+                        var oCurrentOptions = this.getOptions(mOptions);
+                        var oMergedOptions = fShallowMerge({}, oOptions);
+                        oMergedOptions[oConstants.IN_ZONE] = oCurrentOptions[oConstants.OUT_ZONE];
+                        oMergedOptions[oConstants.IN_FORMAT] = oCurrentOptions[oConstants.OUT_FORMAT];
+                        oMergedOptions[oConstants.IN_DATE_FORMAT] = oCurrentOptions[oConstants.OUT_DATE_FORMAT];
+                        oMergedOptions[oConstants.IN_TIME_FORMAT] = oCurrentOptions[oConstants.OUT_TIME_FORMAT];
+                        
+                        return oMergedOptions;
+                    },
+                    
+                    today: function(sTime, mOptions, iFlag) {
+                        if (fMomentLoaded() === false) {
+                            throw new Error('MomentJS didnt initialize');
+                        }
+                        
+                        mOptions = mOptions || 'shop';
+                        var oRevertOptions = this.getRevertOptions(mOptions);
+                        var oToday;
+                        if (!sTime || sTime === 'now') {
+                            oToday = this.parse('', mOptions);
+                        } else {
+                            iFlag = iFlag || oConstants.IN_FORMAT_ALL || 3;
+                            oToday = fMomentWrapper().tz(sTime, getFormatFromFlag(oRevertOptions, iFlag, true), oRevertOptions[oConstants.IN_ZONE]);
+                            if (oToday.isValid() === false) {
+                                var oStandardDateRegex = new RegExp(oConstants.STANDARD_DATE_REGEX.replace(/\//g, ''));
+                                if (oStandardDateRegex.test(sTime) === true) {
+                                    oToday = fMomentWrapper().tz(sTime, oRevertOptions[oConstants.IN_ZONE]);
+                                } else {
+                                    oToday = fMomentWrapper()();
+                                }
+                            }
+                        }
+                        
+                        var oStartOfDay = oToday.clone().startOf('day');
+                        var oEndOfDay = oToday.clone().endOf('day');
+                        
+                        var sStartOfDayInSeoul = oStartOfDay.tz(oConstants.SEOUL).format(oConstants.FULL_TIME);
+                        var sEndOfDayInSeoul = oEndOfDay.tz(oConstants.SEOUL).format(oConstants.FULL_TIME);
+                        
+                        return [sStartOfDayInSeoul, sEndOfDayInSeoul];
+                    },
+                    
+                    parseFromFormat: function(sTime, mOptions, iFlag) {
+                        if (fMomentLoaded() === false) {
+                            return sTime;
+                        }
+                        
+                        mOptions = mOptions || 'shop';
+                        iFlag = iFlag || oConstants.IN_FORMAT_ALL || 3;
+                        
+                        var oRevertOptions = {};
+                        if (typeof mOptions === 'string') {
+                            oRevertOptions = this.getRevertOptions(mOptions);
+                        } else {
+                            oRevertOptions = this.getOptions(mOptions);
+                        }
+                        
+                        return fMomentWrapper()(sTime, getFormatFromFlag(oRevertOptions, iFlag, true));
+                    }
+                };
+            })();</script>
+
+<link rel="stylesheet" type="text/css" href="/ind-script/optimizer.php?filename=tZVBbsQgDEX3Sbc9h9U5Rfc9ASGegAYwss20uf3QmVZqm02VwAYJy3586aNvcBQRXk4MmWlhE4FRqLBFsCJwZkoKlmKk9FQLz_CffrSDUCjqKQ0TfewcLKp7Hw1mRd43qmYK-GMU7VgEWUDNBZMoMUIuU_B2dBoDyIzjjOKXBHLx6XTHRppLQKgyqChcvRQTjjDFss86roTTCvLuMz5OPgL9UjcZ8fauemPzceSj0BRZzaoXHIrvglWioD53YTsMfcD1b8_Fak_2cOpDN4tPRrGPl2bqwt1EU0P0r7hsED4OzXwsJ7ZMWw1biNe2VEHD1r120Hsm0sZZ-e3X303TQG0sNYDEUX5zPmeflsbmUbpWQt112X6Sbw&type=css&k=c17a1ff206f62c7ee83d162d9e9a0deb0df1fd87&t=1582009641" />
+<style type="text/css">
+a[href^='/product/detail.html']:hover > img { opacity:0.5; filter:alpha(opacity=50) !important; }a[name^='anchorBoxName']:hover > img { opacity:0.5; filter:alpha(opacity=50) !important; }
+
+</style>
+<title>TAKEN 타켄</title>
+<meta name="path_role" content="MAIN" />
+<meta name="description" content="TAKEN 온라인스토어입니다. TAKEN에서 제작되는 낚시용품과 특별한 아이템을 만날수있습니다." />
+<meta name="keywords" content="TAKEN, 타켄, 릴튜닝, 낚시용품, 낚시쇼핑몰, 카본릴튜닝" /></head><body id="main"><div id="skipNavigation">
+    <p><a href="#category">전체상품목록 바로가기</a></p>
+    <p><a href="#contents">본문 바로가기</a></p>
+</div>
+
+
+
+
+
+<div id="header">
+<div class="inner">
+
+	<div class="top_left_menu">
+		
+		<div class="xans-element- xans-layout xans-layout-logotop logotop "><a href="/index.html"><img src="/img/top/taken_top_logo.png" alt="TAKEN"/></a>
+</div>
+	    <ul><li>
+				<div id="category" class="xans-element- xans-layout xans-layout-category top_category"><div class="position">
+				        <ul>
+<li><a href="/about.html">ABOUT</a></li>
+				            <li class="xans-record-"><a href="/product/list.html?cate_no=50">HANDLE</a></li>
+				            <li class="xans-record-"><a href="/product/list.html?cate_no=51">KNOB</a></li>
+<li class="xans-record-"><a href="/product/list.html?cate_no=52">PARTS</a></li>
+<li class="xans-record-"><a href="/product/list.html?cate_no=57">ACC</a></li>
+                            
+							<!--<li><a href="custom_soon.html"><font color="#EDA900">CUSTOM</font></a></li>-->
+							
+				        </ul>
+</div>
+</div>
+    		</li>
+    	</ul></div>
+    
+    <div class="top_right_menu">
+
+		<div class="xans-element- xans-layout xans-layout-boardinfo top_board"><ul>
+<li class="t_menu xans-record-"><a href="/board/free/list.html?board_no=1">공지사항</a></li>
+		                        <li class="t_menu"><a href="https://talk.naver.com/ct/wc5pzt" target="_blank"><img src="/img/main/naver_tolk_icon_b.png" width="18px"/> 톡톡1:1문의</a></li>
+                <li class="t_menu"><a href="https://www.takenstore.co.kr/global.html"><img src="/img/main/global_icon01.png" width="18px"/> Global</a></li>
+                <li class="t_menu"><a href="https://www.takenstore.co.kr/contact.html">Contact us</a></li>
+		    </ul>
+</div>
+    
+				
+		<div class="xans-element- xans-layout xans-layout-statelogoff top_util "><ul>
+<li class="t_menu">
+<a href="/myshop/index.html"><img src="/img/main/member_icon_b.png" width="18px" alt="멤버쉽"/></a>
+					<div class="t_view">
+		        	    <div class="sub_sec">
+		        	        <ul>
+<li><a href="/member/login.html" class="log">로그인</a></li>
+		            	        <li><a href="/member/join.html">회원가입</a></li>
+		            	        <li><a href="/myshop/index.html">마이페이지</a></li>
+		        	        </ul>
+</div>
+		        	</div>
+				</li>
+				<li class="t_menu">
+<a href="/order/basket.html"><img src="/img/main/cart_icon_b.png" width="18px" alt="장바구니"/></a>
+		    		<div class="t_view">
+		        	    <div class="sub_sec">
+		        	        <ul>
+<li><a href="/order/basket.html">장바구니 <span class="count displaynone"></span></a></li>
+		            	        <li><a href="/myshop/order/list.html">주문조회</a></li>
+		        	        </ul>
+</div>
+		        	</div>
+		    	</li>
+				<li class="t_menu">
+<a href="#"><img src="/img/main/search_icon_b.png" width="18px" alt="검색"/></a>
+					<div class="t_view_search">
+						
+						<form id="searchBarForm" name="" action="/product/search.html" method="get" target="_self" enctype="multipart/form-data" >
+<input id="banner_action" name="banner_action" value="" type="hidden"  /><div class="xans-element- xans-layout xans-layout-searchheader "><!--
+						        $product_page=/product/detail.html
+						        $category_page=/product/list.html
+						    -->
+<fieldset>
+<legend>검색</legend>
+						        <input id="keyword" name="keyword" fw-filter="" fw-label="검색어" fw-msg="" class="inputTypeText" placeholder="" onmousedown="SEARCH_BANNER.clickSearchForm(this)" value="" type="text"  /><input type="image" src="/img/main/btn_zoom_header.png" alt="검색" onclick="SEARCH_BANNER.submitSearchBanner(this); return false;"/>
+</fieldset>
+</div>
+</form>		        	</div>
+				</li>
+							</ul>
+</div>
+		
+    </div>
+
+</div>
+</div>
+
+<hr class="layout"/><div id="wrap">
+
+    <div id="container">
+        <div id="contents_main">
+            
+
+
+
+<!-- 메인 슬라이드 -->
+
+<div class="swiper-container" style="margin-top:-100px;">
+    <div class="swiper-wrapper">
+        
+	    <!-- 메인 상단 슬라이드 1 -->
+        <div class="swiper-slide" style="background:url('/img/bnr/main_s/mainbnr_13.jpg') 50% 50% no-repeat; background-size:cover;">
+	        <div class="ms_sec" style="color:#EDEDED;">
+                
+		        <h3>Let's fish in my style!</h3>
+		        <h2>TAKEN</h2>
+                <p class="desc">
+
+		        </p>
+		        <br/><div class="btnArea L b_center">
+					<a href="http://takenstore.co.kr/about.html" class="mwhite">About Us</a>
+				</div>
+	        </div>
+        </div>
+        <!-- //메인 상단 슬라이드 1 끝 -->   
+
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+
+
+<!-- 메인 핫 -->
+<div class="main_hot">
+	<div class="hot_inner">
+		<p><a href="#"><img src="/img/main/main_reel.jpg"/></a></p>
+		<h2>TAKE IT TAKEN</h2>
+		<p class="desc" style="color:#666;">
+TAKEN is a Manufacture specialized in tuning fishing reels.
+        </p>
+		<p class="desc" style="color:#666;">
+            We deal in merchandise of Korean high-precision bearings and alumite treatment parts, and also manufacture various metalworking products. Based on our abundant experience of reel maintenance, we are developing custom reel parts that raise reel performance, and excite anglers.
+		</p>
+	</div>
+</div>
+
+<!-- 메인 동영상 -->
+<div class="main_video">
+<iframe width="1240" height="620" src="https://www.youtube.com/embed/wlJYgDgI3PY" frameborder="0" allowfullscreen></iframe>
+</div>
+
+
+
+
+
+<div id="main_prd">
+<!-- 추천상품 -->
+<div class="xans-element- xans-product xans-product-listmain-1 xans-product-listmain xans-product-1 ec-base-product-2"><!--
+        $count = 8
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+<div class="titleArea">
+        <h2>
+            <span style="display: ;">추천상품</span>
+            <span style="display: none;"><img src="" alt="추천상품"/></span>
+        </h2>
+    </div>
+<ul class="prdList grid4">
+<li id="anchorBoxId_355" class="xans-record-">
+    		<a href="/product/detail.html?product_no=355&cate_no=1&display_group=2" name="anchorBoxName_355">
+    	    	<div class="thumbnail_main">
+		        			    	    <p><img src="//taken.co.kr/web/product/medium/20200629/d08b96d0ff715f5e5c6e5ad44374fd76.jpg" class="thumb_img" id="eListPrdImage355_2" alt="타켄 AZ120 핸들 골드/TAKEN AZ120 HANDLE GOLD 120mm"/></p>
+					<div class="description_main">
+					    <p class="name"><span style="font-size:16px;color:#000000;font-weight:bold;">타켄 AZ120 핸들 골드/TAKEN AZ120 HANDLE GOLD 120mm</span></p>
+					    <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#1f1f1f;font-weight:bold;">제조사</span> :</strong> <span style="font-size:14px;color:#1f1f1f;font-weight:bold;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#800000;font-weight:bold;">판매가</span> :</strong> <span style="font-size:14px;color:#800000;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#222222;font-weight:bold;">적립금</span> :</strong> <span style="font-size:14px;color:#222222;font-weight:bold;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+    	    	</div>
+    		</a>
+    	</li>
+    	<li id="anchorBoxId_353" class="xans-record-">
+    	    <a href="/product/detail.html?product_no=353&cate_no=1&display_group=2" name="anchorBoxName_353">
+    	    	<div class="thumbnail_main">
+		        			    	    <p><img src="//taken.co.kr/web/product/medium/20200629/00db6b39fd201119f7cc9011da390576.jpg" class="thumb_img" id="eListPrdImage353_2" alt="타켄 AZ120 핸들 핑크/TAKEN AZ120 HANDLE PINK 120mm"/></p>
+					<div class="description_main">
+					    <p class="name"><span style="font-size:16px;color:#000000;font-weight:bold;">타켄 AZ120 핸들 핑크/TAKEN AZ120 HANDLE PINK 120mm</span></p>
+					    <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#1f1f1f;font-weight:bold;">제조사</span> :</strong> <span style="font-size:14px;color:#1f1f1f;font-weight:bold;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#800000;font-weight:bold;">판매가</span> :</strong> <span style="font-size:14px;color:#800000;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#222222;font-weight:bold;">적립금</span> :</strong> <span style="font-size:14px;color:#222222;font-weight:bold;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+    	    	</div>
+    		</a>
+    	</li>
+<li id="anchorBoxId_352" class="xans-record-">
+    	    <a href="/product/detail.html?product_no=352&cate_no=1&display_group=2" name="anchorBoxName_352">
+    	    	<div class="thumbnail_main">
+		        			    	    <p><img src="//taken.co.kr/web/product/medium/20200629/b07d9c7b1387c20545b931f66112ced8.jpg" class="thumb_img" id="eListPrdImage352_2" alt="타켄 AZ120 핸들 티타늄/TAKEN AZ120 HANDLE TITANIUM 120mm"/></p>
+					<div class="description_main">
+					    <p class="name"><span style="font-size:16px;color:#000000;font-weight:bold;">타켄 AZ120 핸들 티타늄/TAKEN AZ120 HANDLE TITANIUM 120mm</span></p>
+					    <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#1f1f1f;font-weight:bold;">제조사</span> :</strong> <span style="font-size:14px;color:#1f1f1f;font-weight:bold;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#800000;font-weight:bold;">판매가</span> :</strong> <span style="font-size:14px;color:#800000;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#222222;font-weight:bold;">적립금</span> :</strong> <span style="font-size:14px;color:#222222;font-weight:bold;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+    	    	</div>
+    		</a>
+    	</li>
+<li id="anchorBoxId_300" class="xans-record-">
+    	    <a href="/product/detail.html?product_no=300&cate_no=1&display_group=2" name="anchorBoxName_300">
+    	    	<div class="thumbnail_main">
+		        			    	    <p><img src="//taken.co.kr/web/product/medium/201905/03f6fef7380c5aaa31d4733f80dfcc2a.jpg" class="thumb_img" id="eListPrdImage300_2" alt="타켄 A2 노브 레드/TAKEN A2 KNOB RED"/></p>
+					<div class="description_main">
+					    <p class="name"><span style="font-size:16px;color:#000000;font-weight:bold;">타켄 A2 노브 레드/TAKEN A2 KNOB RED</span></p>
+					    <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#1f1f1f;font-weight:bold;">제조사</span> :</strong> <span style="font-size:14px;color:#1f1f1f;font-weight:bold;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#800000;font-weight:bold;">판매가</span> :</strong> <span style="font-size:14px;color:#800000;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#222222;font-weight:bold;">적립금</span> :</strong> <span style="font-size:14px;color:#222222;font-weight:bold;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+    	    	</div>
+    		</a>
+    	</li>
+<li id="anchorBoxId_297" class="xans-record-">
+    	    <a href="/product/detail.html?product_no=297&cate_no=1&display_group=2" name="anchorBoxName_297">
+    	    	<div class="thumbnail_main">
+		        			    	    <p><img src="//taken.co.kr/web/product/medium/201905/9938a3079ab37494d89e3cd8f4aa992f.jpg" class="thumb_img" id="eListPrdImage297_2" alt="타켄 A2 노브 골드/TAKEN A2 KNOB GOLD"/></p>
+					<div class="description_main">
+					    <p class="name"><span style="font-size:16px;color:#000000;font-weight:bold;">타켄 A2 노브 골드/TAKEN A2 KNOB GOLD</span></p>
+					    <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#1f1f1f;font-weight:bold;">제조사</span> :</strong> <span style="font-size:14px;color:#1f1f1f;font-weight:bold;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#800000;font-weight:bold;">판매가</span> :</strong> <span style="font-size:14px;color:#800000;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#222222;font-weight:bold;">적립금</span> :</strong> <span style="font-size:14px;color:#222222;font-weight:bold;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+    	    	</div>
+    		</a>
+    	</li>
+<li id="anchorBoxId_307" class="xans-record-">
+    	    <a href="/product/detail.html?product_no=307&cate_no=1&display_group=2" name="anchorBoxName_307">
+    	    	<div class="thumbnail_main">
+		        			    	    <p><img src="//taken.co.kr/web/product/medium/201909/bba06ea40fe11401ba392edd40eb2f08.jpg" class="thumb_img" id="eListPrdImage307_2" alt="타켄 A2 듀얼코어 핸들 티타늄/TAKEN A2 DUAL CORE HANDLE TITANIUM 85,90mm"/></p>
+					<div class="description_main">
+					    <p class="name"><span style="font-size:16px;color:#000000;font-weight:bold;">타켄 A2 듀얼코어 핸들 티타늄/TAKEN A2 DUAL CORE HANDLE TITANIUM 85,90mm</span></p>
+					    <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#1f1f1f;font-weight:bold;">제조사</span> :</strong> <span style="font-size:14px;color:#1f1f1f;font-weight:bold;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#800000;font-weight:bold;">판매가</span> :</strong> <span style="font-size:14px;color:#800000;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#222222;font-weight:bold;">적립금</span> :</strong> <span style="font-size:14px;color:#222222;font-weight:bold;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+    	    	</div>
+    		</a>
+    	</li>
+<li id="anchorBoxId_290" class="xans-record-">
+    	    <a href="/product/detail.html?product_no=290&cate_no=1&display_group=2" name="anchorBoxName_290">
+    	    	<div class="thumbnail_main">
+		        			    	    <p><img src="//taken.co.kr/web/product/medium/201904/be932ad1ff9b3fa9587f7b723cff1523.jpg" class="thumb_img" id="eListPrdImage290_2" alt="타켄 A2 듀얼코어 핸들 골드/TAKEN A2 DUAL CORE HANDLE GOLD 85,90mm"/></p>
+					<div class="description_main">
+					    <p class="name"><span style="font-size:16px;color:#000000;font-weight:bold;">타켄 A2 듀얼코어 핸들 골드/TAKEN A2 DUAL CORE HANDLE GOLD 85,90mm</span></p>
+					    <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#1f1f1f;font-weight:bold;">제조사</span> :</strong> <span style="font-size:14px;color:#1f1f1f;font-weight:bold;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#800000;font-weight:bold;">판매가</span> :</strong> <span style="font-size:14px;color:#800000;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#222222;font-weight:bold;">적립금</span> :</strong> <span style="font-size:14px;color:#222222;font-weight:bold;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+    	    	</div>
+    		</a>
+    	</li>
+<li id="anchorBoxId_293" class="xans-record-">
+    	    <a href="/product/detail.html?product_no=293&cate_no=1&display_group=2" name="anchorBoxName_293">
+    	    	<div class="thumbnail_main">
+		        			    	    <p><img src="//taken.co.kr/web/product/medium/201904/df8df510fa8c9c6cfe6c0b50d214aa39.jpg" class="thumb_img" id="eListPrdImage293_2" alt="타켄 A2 듀얼코어 핸들 레드/TAKEN A2 DUAL CORE HANDLE RED 85,90mm"/></p>
+					<div class="description_main">
+					    <p class="name"><span style="font-size:16px;color:#000000;font-weight:bold;">타켄 A2 듀얼코어 핸들 레드/TAKEN A2 DUAL CORE HANDLE RED 85,90mm</span></p>
+					    <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#1f1f1f;font-weight:bold;">제조사</span> :</strong> <span style="font-size:14px;color:#1f1f1f;font-weight:bold;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#800000;font-weight:bold;">판매가</span> :</strong> <span style="font-size:14px;color:#800000;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:14px;color:#222222;font-weight:bold;">적립금</span> :</strong> <span style="font-size:14px;color:#222222;font-weight:bold;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+    	    	</div>
+    		</a>
+    	</li>
+	</ul>
+</div>
+<!-- //추천상품 -->
+</div>
+
+<!-- 홀 베너 -->
+<div class="main_hole" style="background:url('/img/bnr/main_s/subbnr_01.jpg')50% 50% no-repeat;background-attachment:fixed;background-size:cover;">
+	<div class="hole_inner">
+		<div class="hb_sec" style="color:#fff;">
+            <h2>Take it TAKEN</h2>
+            <p class="desc">
+             Let's fish in my style!
+            </p>              
+		</div>
+	</div>
+</div>
+
+
+<div id="main_prd">
+<!-- 신상품 -->
+<div class="xans-element- xans-product xans-product-listmain-2 xans-product-listmain xans-product-2 ec-base-product"><!--
+        $count = yes
+        $basket_result = /product/add_basket.html
+        $basket_option = /product/basket_option.html
+    -->
+<div class="titleArea">
+        <h2>
+            <span style="display: ;">신상품</span>
+            <span style="display: none;"><img src="" alt="신상품"/></span>
+        </h2>
+    </div>
+<ul class="prdList grid4">
+<li id="anchorBoxId_357" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=357&cate_no=1&display_group=3" name="anchorBoxName_357"><img src="//taken.co.kr/web/product/medium/20200629/fe621c703f591b29e64525e547b51947.jpg" id="eListPrdImage357_3" alt="타켄 AZ120 핸들 레드/TAKEN AZ120 HANDLE RED 120mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion"><img src="//img.echosting.cafe24.com/design/common/icon_sellout.gif"  class="icon_img" alt="품절" />   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=357&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 AZ120 핸들 레드/TAKEN AZ120 HANDLE RED 120mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+        <li id="anchorBoxId_356" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=356&cate_no=1&display_group=3" name="anchorBoxName_356"><img src="//taken.co.kr/web/product/medium/20200629/052ab1af1a1cd8f8bfc6a19298a9720a.jpg" id="eListPrdImage356_3" alt="타켄 AZ120 핸들 건메탈/TAKEN AZ120 HANDLE GUNMETAL 120mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion"><img src="//img.echosting.cafe24.com/design/common/icon_sellout.gif"  class="icon_img" alt="품절" />   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=356&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 AZ120 핸들 건메탈/TAKEN AZ120 HANDLE GUNMETAL 120mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_355" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=355&cate_no=1&display_group=3" name="anchorBoxName_355"><img src="//taken.co.kr/web/product/medium/20200629/d08b96d0ff715f5e5c6e5ad44374fd76.jpg" id="eListPrdImage355_3" alt="타켄 AZ120 핸들 골드/TAKEN AZ120 HANDLE GOLD 120mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion"><img src="//img.echosting.cafe24.com/design/common/icon_sellout.gif"  class="icon_img" alt="품절" />   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=355&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 AZ120 핸들 골드/TAKEN AZ120 HANDLE GOLD 120mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_354" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=354&cate_no=1&display_group=3" name="anchorBoxName_354"><img src="//taken.co.kr/web/product/medium/20200629/9c896a62c63e584832ffae1199942afb.jpg" id="eListPrdImage354_3" alt="타켄 AZ120 핸들 S골드/TAKEN AZ120 HANDLE S.GOLD 120mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion"><img src="//img.echosting.cafe24.com/design/common/icon_sellout.gif"  class="icon_img" alt="품절" />   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=354&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 AZ120 핸들 S골드/TAKEN AZ120 HANDLE S.GOLD 120mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_353" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=353&cate_no=1&display_group=3" name="anchorBoxName_353"><img src="//taken.co.kr/web/product/medium/20200629/00db6b39fd201119f7cc9011da390576.jpg" id="eListPrdImage353_3" alt="타켄 AZ120 핸들 핑크/TAKEN AZ120 HANDLE PINK 120mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion"><img src="//img.echosting.cafe24.com/design/common/icon_sellout.gif"  class="icon_img" alt="품절" />   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=353&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 AZ120 핸들 핑크/TAKEN AZ120 HANDLE PINK 120mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_352" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=352&cate_no=1&display_group=3" name="anchorBoxName_352"><img src="//taken.co.kr/web/product/medium/20200629/b07d9c7b1387c20545b931f66112ced8.jpg" id="eListPrdImage352_3" alt="타켄 AZ120 핸들 티타늄/TAKEN AZ120 HANDLE TITANIUM 120mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion"><img src="//img.echosting.cafe24.com/design/common/icon_sellout.gif"  class="icon_img" alt="품절" />   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=352&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 AZ120 핸들 티타늄/TAKEN AZ120 HANDLE TITANIUM 120mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_351" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=351&cate_no=1&display_group=3" name="anchorBoxName_351"><img src="//taken.co.kr/web/product/medium/20200629/dc8ce18ad3b02a2c1166b0addc88c35c.jpg" id="eListPrdImage351_3" alt="타켄 AZ120 핸들 블랙/TAKEN AZ120 HANDLE BLACK 120mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion"><img src="//img.echosting.cafe24.com/design/common/icon_sellout.gif"  class="icon_img" alt="품절" />   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=351&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 AZ120 핸들 블랙/TAKEN AZ120 HANDLE BLACK 120mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">98,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 4,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_300" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=300&cate_no=1&display_group=3" name="anchorBoxName_300"><img src="//taken.co.kr/web/product/medium/201905/03f6fef7380c5aaa31d4733f80dfcc2a.jpg" id="eListPrdImage300_3" alt="타켄 A2 노브 레드/TAKEN A2 KNOB RED"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('300','1', '3', 'A0000', false, '1', 'P00000LO', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=300&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 레드/TAKEN A2 KNOB RED</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_299" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=299&cate_no=1&display_group=3" name="anchorBoxName_299"><img src="//taken.co.kr/web/product/medium/201905/1edb96818f2a388d441fe59a797e5d4b.jpg" id="eListPrdImage299_3" alt="타켄 A2 노브 퍼플/TAKEN A2 KNOB PURPLE"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('299','1', '3', 'A0000', false, '1', 'P00000LN', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=299&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 퍼플/TAKEN A2 KNOB PURPLE</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_298" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=298&cate_no=1&display_group=3" name="anchorBoxName_298"><img src="//taken.co.kr/web/product/medium/201905/2356abb8ae93e54e093c583bb65a82fb.jpg" id="eListPrdImage298_3" alt="타켄 A2 노브 건메탈/TAKEN A2 KNOB GUNMETAL"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('298','1', '3', 'A0000', false, '1', 'P00000LM', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=298&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 건메탈/TAKEN A2 KNOB GUNMETAL</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_297" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=297&cate_no=1&display_group=3" name="anchorBoxName_297"><img src="//taken.co.kr/web/product/medium/201905/9938a3079ab37494d89e3cd8f4aa992f.jpg" id="eListPrdImage297_3" alt="타켄 A2 노브 골드/TAKEN A2 KNOB GOLD"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('297','1', '3', 'A0000', false, '1', 'P00000LL', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=297&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 골드/TAKEN A2 KNOB GOLD</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_296" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=296&cate_no=1&display_group=3" name="anchorBoxName_296"><img src="//taken.co.kr/web/product/medium/201905/d66d92dd888de5a9ee8e71470b17a9d8.jpg" id="eListPrdImage296_3" alt="타켄 A2 노브 스카이블루/TAKEN A2 KNOB SKY BLUE"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('296','1', '3', 'A0000', false, '1', 'P00000LK', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=296&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 스카이블루/TAKEN A2 KNOB SKY BLUE</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_295" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=295&cate_no=1&display_group=3" name="anchorBoxName_295"><img src="//taken.co.kr/web/product/medium/201905/4c27bb20e105a9f461ff1f3cda64a5db.jpg" id="eListPrdImage295_3" alt="타켄 A2 노브 핑크/TAKEN A2 KNOB PINK"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('295','1', '3', 'A0000', false, '1', 'P00000LJ', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=295&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 핑크/TAKEN A2 KNOB PINK</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_294" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=294&cate_no=1&display_group=3" name="anchorBoxName_294"><img src="//taken.co.kr/web/product/medium/201905/fb559d9df6b5fb0d7dec8b4539790f82.jpg" id="eListPrdImage294_3" alt="타켄 A2 노브 로열블루/TAKEN A2 KNOB ROYAL BLUE"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('294','1', '3', 'A0000', false, '1', 'P00000LI', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=294&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 로열블루/TAKEN A2 KNOB ROYAL BLUE</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_293" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=293&cate_no=1&display_group=3" name="anchorBoxName_293"><img src="//taken.co.kr/web/product/medium/201904/df8df510fa8c9c6cfe6c0b50d214aa39.jpg" id="eListPrdImage293_3" alt="타켄 A2 듀얼코어 핸들 레드/TAKEN A2 DUAL CORE HANDLE RED 85,90mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(293,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=293&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 듀얼코어 핸들 레드/TAKEN A2 DUAL CORE HANDLE RED 85,90mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_292" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=292&cate_no=1&display_group=3" name="anchorBoxName_292"><img src="//taken.co.kr/web/product/medium/201904/c3f45316eb6f95beeead1350696cf95f.jpg" id="eListPrdImage292_3" alt="타켄 A2 듀얼코어 핸들 퍼플/TAKEN A2 DUAL CORE HANDLE PURPLE 85,90mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(292,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=292&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 듀얼코어 핸들 퍼플/TAKEN A2 DUAL CORE HANDLE PURPLE 85,90mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_291" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=291&cate_no=1&display_group=3" name="anchorBoxName_291"><img src="//taken.co.kr/web/product/medium/201904/9088f5d1314e94ea2c3924cde1a56ad1.jpg" id="eListPrdImage291_3" alt="타켄 A2 듀얼코어 핸들 건메탈/TAKEN A2 DUAL CORE HANDLE GUNMETAL 85,90mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(291,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=291&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 듀얼코어 핸들 건메탈/TAKEN A2 DUAL CORE HANDLE GUNMETAL 85,90mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_290" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=290&cate_no=1&display_group=3" name="anchorBoxName_290"><img src="//taken.co.kr/web/product/medium/201904/be932ad1ff9b3fa9587f7b723cff1523.jpg" id="eListPrdImage290_3" alt="타켄 A2 듀얼코어 핸들 골드/TAKEN A2 DUAL CORE HANDLE GOLD 85,90mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(290,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=290&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 듀얼코어 핸들 골드/TAKEN A2 DUAL CORE HANDLE GOLD 85,90mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_289" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=289&cate_no=1&display_group=3" name="anchorBoxName_289"><img src="//taken.co.kr/web/product/medium/201904/f8b4ccede8223a1318a40a10f5d99d8b.jpg" id="eListPrdImage289_3" alt="타켄 A2 듀얼코어 핸들 스카이블루/TAKEN A2 DUAL CORE HANDLE SKY BLUE 85,90mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(289,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=289&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 듀얼코어 핸들 스카이블루/TAKEN A2 DUAL CORE HANDLE SKY BLUE 85,90mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_307" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=307&cate_no=1&display_group=3" name="anchorBoxName_307"><img src="//taken.co.kr/web/product/medium/201909/bba06ea40fe11401ba392edd40eb2f08.jpg" id="eListPrdImage307_3" alt="타켄 A2 듀얼코어 핸들 티타늄/TAKEN A2 DUAL CORE HANDLE TITANIUM 85,90mm"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(307,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=307&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 듀얼코어 핸들 티타늄/TAKEN A2 DUAL CORE HANDLE TITANIUM 85,90mm</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">175,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 8,700원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_284" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=284&cate_no=1&display_group=3" name="anchorBoxName_284"><img src="//taken.co.kr/web/product/medium/201902/acd5a745f3713fd709ee28bcf23efe04.jpg" id="eListPrdImage284_3" alt="타켄 스타드렉 D1 레드/TAKEN STARDRAG D1 RED"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('284','1', '3', 'A0000', false, '1', 'P00000KY', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=284&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 스타드렉 D1 레드/TAKEN STARDRAG D1 RED</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">타켄</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">39,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_283" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=283&cate_no=1&display_group=3" name="anchorBoxName_283"><img src="//taken.co.kr/web/product/medium/201902/256bc18ce2c9d5bc0f44480c8dfa88eb.jpg" id="eListPrdImage283_3" alt="타켄 스타드렉 D1 퍼플/TAKEN STARDRAG D1 PURPLE"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('283','1', '3', 'A0000', false, '1', 'P00000KX', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=283&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 스타드렉 D1 퍼플/TAKEN STARDRAG D1 PURPLE</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">타켄</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">39,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_282" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=282&cate_no=1&display_group=3" name="anchorBoxName_282"><img src="//taken.co.kr/web/product/medium/201902/7225ebad290f2e80c026f2b841b806a5.jpg" id="eListPrdImage282_3" alt="타켄 스타드렉 D1 골드/TAKEN STARDRAG D1 GOLD"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('282','1', '3', 'A0000', false, '1', 'P00000KW', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=282&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 스타드렉 D1 골드/TAKEN STARDRAG D1 GOLD</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">타켄</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">39,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_281" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=281&cate_no=1&display_group=3" name="anchorBoxName_281"><img src="//taken.co.kr/web/product/medium/201902/07cf0343725192adf94ab35d60cc755c.jpg" id="eListPrdImage281_3" alt="타켄 스타드렉 D1 핑크/TAKEN STARDRAG D1 PINK"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('281','1', '3', 'A0000', false, '1', 'P00000KV', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=281&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 스타드렉 D1 핑크/TAKEN STARDRAG D1 PINK</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">타켄</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">39,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_280" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=280&cate_no=1&display_group=3" name="anchorBoxName_280"><img src="//taken.co.kr/web/product/medium/201902/80518b76065ae5cc14cd568ac19c8832.jpg" id="eListPrdImage280_3" alt="타켄 스타드렉 D1 로열블루/TAKEN STARDRAG D1 ROYAL BULE"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('280','1', '3', 'A0000', false, '1', 'P00000KU', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=280&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 스타드렉 D1 로열블루/TAKEN STARDRAG D1 ROYAL BULE</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">타켄</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">39,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,900원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_279" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=279&cate_no=1&display_group=3" name="anchorBoxName_279"><img src="//taken.co.kr/web/product/medium/201901/d448d8be2bd627cec67c74073333b3fe.jpg" id="eListPrdImage279_3" alt="타켄 젠투 릴스텐드 스페셜 에머랄드/TAKEN ZEN2 REEL STAND SPECIAL EMERALD"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(279,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=279&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 젠투 릴스텐드 스페셜 에머랄드/TAKEN ZEN2 REEL STAND SPECIAL EMERALD</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">타켄</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">30,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,500원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_320" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=320&cate_no=1&display_group=3" name="anchorBoxName_320"><img src="//taken.co.kr/web/product/medium/201910/48301af4c7831aad9f55ffa5df561b6f.jpg" id="eListPrdImage320_3" alt="타켄 젠투 릴스텐드 블랙/TAKEN ZEN2 REEL STAND BLACK"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(320,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=320&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 젠투 릴스텐드 블랙/TAKEN ZEN2 REEL STAND BLACK</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">타켄</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">30,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,500원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_336" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=336&cate_no=1&display_group=3" name="anchorBoxName_336"><img src="//taken.co.kr/web/product/medium/20191201/d0bbde6dbb33a60bbc692e649dc0603f.jpg" id="eListPrdImage336_3" alt="타켄 A2 노브 블랙/TAKEN A2 KNOB BLACK"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('336','1', '3', 'A0000', false, '1', 'P00000MY', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=336&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 블랙/TAKEN A2 KNOB BLACK</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+<li id="anchorBoxId_337" class="xans-record-">
+            <div class="thumbnail">
+                <a href="/product/detail.html?product_no=337&cate_no=1&display_group=3" name="anchorBoxName_337"><img src="//taken.co.kr/web/product/medium/20191201/821730768060fa65068105223c09e987.jpg" id="eListPrdImage337_3" alt="타켄 A2 노브 티타늄/TAKEN A2 KNOB TITANIUM"/></a>
+            </div>
+            <div class="description">
+	            
+                <div class="icon">
+	                <div class="likeButton displaynone"><button type="button"><strong></strong></button></div>
+                    <div class="option"></div>
+                    <div class="basket"><img src="//img.echosting.cafe24.com/design/skin/default/product/btn_list_cart.gif"  onClick="category_add_basket('337','1', '3', 'A0000', false, '1', 'P00000MZ', 'A', 'F', '0');" alt="장바구니 담기" class="ec-admin-icon cart" /></div>
+                    <div class="wish"></div>
+                </div>
+                
+                <div class="promotion">   <img src="//img.echosting.cafe24.com/design/common/icon_new_p.gif"  class="icon_img" alt="New" />  </div>
+                
+                <p class="name"><a href="/product/detail.html?product_no=337&cate_no=1&display_group=3" class=""><span class="title displaynone"><span style="font-size:12px;color:#555555;">상품명</span> :</span> <span style="font-size:12px;color:#555555;">타켄 A2 노브 티타늄/TAKEN A2 KNOB TITANIUM</span></a></p>
+                
+                <ul class="xans-element- xans-product xans-product-listitem-2 xans-product-listitem xans-product-2 spec"><li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">제조사</span> :</strong> <span style="font-size:12px;color:#555555;">TAKEN</span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#008BCC;font-weight:bold;">판매가</span> :</strong> <span style="font-size:12px;color:#008BCC;font-weight:bold;">28,000원</span><span id="span_product_tax_type_text" style=""> </span></li>
+<li class=" xans-record-">
+<strong class="title displaynone"><span style="font-size:12px;color:#555555;">적립금</span> :</strong> <span style="font-size:12px;color:#555555;"><span id="span_mileage_text"><img src="/web/upload/icon_201710242140149100.png" alt="적립금" style="margin-bottom:2px;"/> 1,400원</span> (5%)</span></li>
+</ul>
+</div>
+        </li>
+	</ul>
+</div>
+<!-- //신상품 -->
+
+<!-- 네이처트루퍼스 -->
+<!-- //네이처트루퍼스 -->
+   
+</div>
+
+
+        </div>
+    </div>
+    
+</div>
+
+<hr class="layout"/><div class="gotop"><a href="#top"><img src="/inn/arrow_top.png" alt="Back to Top"/></a></div>
+
+<div id="footer">
+<div class="inner">
+    
+	
+    <div class="xans-element- xans-layout xans-layout-footer foot_sec "><ul>
+<li style="width:40%;">
+				<p class="foot_tit">TAKEN </p>
+        	    <p>COMPANY : TAKEN (타켄) </p>
+        	    <p>CEO : 이서진</p>
+        	    <p>E-MAIL : <a href="mailto:turbotek01@hanmail.net">turbotek01@gmail.com</a></p>
+        	    <p>ADDRESS : 13220 경기도 성남시 중원구 사기막골로 45 (상대원동) <br/> 14 우림라이온스밸리 2차 A동 910호</p>
+        	    <p>BUSINESS LICENSE : 1054514474</p>
+        	    <p>ECOMMERCE LICENSE : 2017-성남중원-0434 <a href="https://www.ftc.go.kr/info/bizinfo/communicationView.jsp?apv_perm_no=2017378021930201998&amp;area1=&amp;area2=&amp;currpage=1&amp;searchKey=04&amp;searchVal=1054514474&amp;stdate=&amp;enddate=" target="_blank">[사업자정보확인]</a></p>
+        	</li>
+        	<li style="width:33%;">
+        		<p class="foot_tit">CS CENTER</p>
+        		<p>TEL : 031-747-7153</p>
+                <p>FAX : 031-747-7163</p>
+        		<p>OPEN : AM 10:00 ~ PM 06:00 / Sat, Sun, Holiday OFF</p>
+        		<br/><p class="foot_tit">BANK ACCOUNT</p>
+        		<p>예금주 : 이서진</p>
+        		<p>신한은행 110-139-106182</p>
+        	</li>
+        	<li style="width:27%;">
+        		<p class="foot_sns">
+	        		<a href="https://www.facebook.com/www.taken.co.kr/" target="_blank"><img src="/img/main/sns_facebook.png" alt="페이스북"/></a>
+					<a href="https://www.instagram.com/taken_eng/?hl=ko" target="_blank"><img src="/img/main/sns_instagram.png" alt="인스타그램"/></a>
+					<!--<a href="#" target="_blank"><img src="/img/main/sns_blog.png" alt="블로그" /></a>-->
+					<a href="https://www.youtube.com/channel/UCLYsEnbocGyIBJOPqTXTMrw?view_as=subscriber" target="_blank"><img src="/img/main/sns_youtube.png" alt="유튜브"/></a>
+				</p>
+				<br/><p class="foot_tit">DELIVERY INFO</p>
+        		<p>배송조회 : 로젠택배<a href="https://www.ilogen.com/d2d/delivery/invoice_search.jsp" target="_blank"> (배송조회)</a></p>
+        		<p>반송주소 : 13220 경기도 성남시 중원구 사기막골로 45 (상대원동) 14 우림라이온스밸리 2차 A동 910호</p>
+        	</li>
+		</ul>
+</div>
+    
+    <div class="util_menu">
+    	<ul><li><a href="/member/agreement.html">이용약관</a></li>
+			<li><a href="/member/privacy.html">개인정보취급방침</a></li>
+			<li><a href="/shopinfo/guide.html">이용안내</a></li>
+    	</ul></div>
+    <div class="xans-element- xans-layout xans-layout-footer copyright "><p>Copyright © TAKEN. All rights reserved.</p>
+</div>
+        
+</div>
+</div>
+
+<!-- 참고: 결제를 위한 필수 영역 -->
+<div id="progressPaybar" style="display:none;">
+    <div id="progressPaybarBackground" class="layerProgress"></div>
+    <div id="progressPaybarView">
+        <div class="box">
+            <p class="graph">
+                <span><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/layout/txt_progress.gif" alt="현재 결제가 진행중입니다."/></span>
+                <span><img src="http://img.echosting.cafe24.com/skin/base/layout/img_loading.gif" alt=""/></span>
+            </p>
+            <p class="txt">
+                본 결제 창은 결제완료 후 자동으로 닫히며,결제 진행 중에 본 결제 창을 닫으시면<br/>
+                주문이 되지 않으니 결제 완료 될 때 까지 닫지 마시기 바랍니다.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- //참고 -->
+
+
+
+
+                <script>
+                try {
+                    // Account ID 적용
+                    if (!wcs_add) var wcs_add = {};
+                    wcs_add["wa"] = "s_568a08705ab9";
+            
+                    // 마일리지 White list가 있을 경우
+                    wcs.mileageWhitelist = ["takenstore.cafe24.com", "www.takenstore.cafe24.com", "m.takenstore.cafe24.com", "takenstore.co.kr", "www.takenstore.co.kr", "m.takenstore.co.kr", "taken.co.kr", "www.taken.co.kr", "m.taken.co.kr"];
+
+                    // 네이버 페이 White list가 있을 경우
+                    wcs.checkoutWhitelist = ["takenstore.cafe24.com", "www.takenstore.cafe24.com", "m.takenstore.cafe24.com", "takenstore.co.kr", "www.takenstore.co.kr", "m.takenstore.co.kr", "taken.co.kr", "www.taken.co.kr", "m.taken.co.kr"];
+                
+                    // 레퍼러 (스크립트 인젠션 공격 대응 strip_tags) ECQAINT-15101
+                    wcs.setReferer("http://taken.co.kr/");
+
+                    // 유입 추적 함수 호출
+                    wcs.inflow("taken.co.kr");
+
+                    // 로그수집
+                    wcs_do();
+                } catch (e) {};
+                </script>
+            
+<script type="text/javascript" src="/ind-script/i18n.php?lang=ko_KR&domain=front&v=2007151147" charset="utf-8"></script>
+
+<script type="text/javascript" src="/ind-script/optimizer.php?filename=tZXdbtswDIVfwLd7Di37AXa7FOjVhg0d-gC0RNtMJFGlpLbZ049O1yHB4KSOEfjCAMHzHVmHks3AAc3qg5hOIOATy9YIZq5i0WyyodWX2GzyO3Oqr1ICuzWbh4qy-_v62Hxu3l-kbNA2kS3HzpMtFyFWzSd9LjJP7HcdeX-sTsK9Ao62JiehWLrzjY5tDRjLLUu44ViEvUc5r_vpa_6a0lrI9Xi-vRNlm2eImlosKEmwvMXmQFcwJA9lwgxSMt-5JY_m7kBvOQSOphbys3SBXdVSfqI0z7Cr0RZSS-1zVUcksCwknFiEp9bcv0zKIcLD751ncLNEoRYYfX-0GeVxKpwJ8dsn8yVRhx1UX8YtyAGkrCHGKcux6dfA6cjwdo-52cd7fzLdKamOUs-y-0a5TIvXDOKO1Fpt2rE68wjjsw58BJ9fD3Pb0160lGOZt7SY4khvgazx56UkhEyxX0oJWMBBgdm5ZgSxw6zhLdB16khzfybJ1570ZnoET7pWltfF_yssBo77El3-H6yEpGHh9RwG9Amv-AUDROevaaB3GGmum_wH&type=js&k=58f1ee00b55576189b22be21d2b3e78b6b6c7d75&t=1592936787"></script>
+<script type="text/javascript" src="/ind-script/optimizer.php?filename=rdTBbsIwDADQD4DrvsPa_mDAkJDQQKu2e5aakjaNM8cZ8PfraAWdNKapzaEHq_Gr08SGPdUI9w8MO1Y1HogrYAwUWSNE45WuoPyIyCfwNhbGBfhU1uRKiAGPgi4P3YLp5cV0Z6wgT8twB2N8S1pZhIp-Sp6paLCrU_aSfl-qvIdsTx5eejlLJifwjIfvZ8uURy0bL4Zchha1DKK6f1EGckNL2VhXDcpti4eno7A6Q-f4HGZkc4qSmt2y0ZgaXdWqSI4uTPBWnYxgnZBeNVxmXGGxvTJm4Kn_WTg38EyFCpMf3zK6vKl-DHsB51TX43bfo1xIAs2My5NACyUqCfTWzqmb98Sad3htx2IfnEdmdPoEofnUxN_uun_l6y6a7IhrJWMrScVEMXbk-F6bICOJx-FdfEUyIT1shq9NhTBjOgTkudJ7HK6M6MhefrejhvkC&type=js&k=00dd3f02a93e3be50e59bba0bac51cd6f526f9e0&t=1592936787"></script>
+<script type="text/javascript" src="/ind-script/optimizer.php?filename=rZVNbsIwEIUPQLc9h9XeoIDaLgJFFKnrwRnIENtj-Ycot68LWSC1tMTuxrLsvG8m9puxaFijeHh0wjreO9ACrBXvDVuxRs_RSRQHL54dmyBWjusog5hjAFJiGk2tMC1qDsTm7uDvxRjcEru0eiTsAqh2mM44mvAzyl0QNBjYo9AcPU520cjfM1icP7_MocOt4v3fkZqgFZpAgdCPCgC-N_I8Zus06i26bPmbq9HJa-d5A2AKvsVQTrCOJBYyBvdlU5KzLJuSf1mQwrSfrZ-jZU_58T_INxX5MoC8XmA3EBxKLJCvT_INp4KfFeVxcna-odDgjkpNXUFfkMOLgzrfSk8xsIZA8oRJDbbLd3VUgVZso81H9BW1OBRo2cVWdERFph3Zzb954zXVCbv-H1w2kDawzeBYCI1jhZMjKKohgfJPhqEeJbYZDfP84EzSy0hfF_AJ&type=js&k=0f8cc74c44a5c29df69b4bfec00420241c932857&t=1592332123"></script>
+<script type="text/javascript" src="/ind-script/optimizer.php?filename=tdFRCsMgDADQA7jfnSOwq-wENgbNqsYZXelOP6HsY991BEJC4BESCJIICE1XqgrNrpS1SSUofYmMJrQUQR0ZR8o-g66cb6BYuTSzCy076MaFjlwvD73CRPOEF-0uvcFilREeehQnvEGgpCT5nJHE9Ujf7Z6dcTUvpm3W5VyV4mTLszwvbUSZxdUxeZMJZB1VwGhVmf6D_3Qzn4a2kZe6zzRTj401SLkHLoWzH_gH&type=js&k=a72c5338dcef953b736b84c2d8a044c250f1db81&t=1506674992"></script>
+<script type="text/javascript">
+var EC_MOBILE = false;
+var EC_MOBILE_DEVICE = false;
+var EC_MOBILE_USE = true;
+localStorage.setItem('EC_JQUERY_VERSION','1.4.4');
+var mobileWeb = false;
+var bUseElastic = false;
+var sSearchBannerUseFlag = 'F';
+var bUseElastic = false;
+var SHOP_CURRENCY_INFO = {"1":{"aShopCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"aShopSubCurrencyInfo":null,"aBaseCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"fExchangeRate":1,"fExchangeSubRate":null,"aFrontCurrencyFormat":{"head":"","tail":"\uc6d0"},"aFrontSubCurrencyFormat":{"head":"","tail":""}}};
+EC_SHOP_FRONT_NEW_OPTION_COMMON.initObject();
+EC_SHOP_FRONT_NEW_OPTION_BIND.initChooseBox();
+EC_SHOP_FRONT_NEW_OPTION_DATA.initData();
+EC_SHOP_FRONT_NEW_LIKE_COMMON.init({"bIsUseLikeProduct":false,"bIsUseLikeCategory":false});
+EC_SHOP_FRONT_REVIEW_TALK_REVIEW_COUNT.bIsReviewTalk = 'F';
+var basket_result = '/product/add_basket.html';
+var basket_option = '/product/basket_option.html';
+var aLogData = {"log_server1":"eclog2-026.cafe24.com","log_server2":"eclog2-026.cafe24.com","mid":"takenstore","stype":"e","domain":"","shop_no":"1","lang":"ko_KR","ver":2,"etc":""};
+var sMileageName = '적립금';
+var sMileageUnit = '[:PRICE:]원';
+var sDepositName = '예치금';
+var sDepositUnit = '원';
+var EC_ASYNC_LIVELINKON_ID = '';
+if ($('[async_section=before]').length > 0) {
+$('[async_section=before]').addClass('displaynone');
+}
+var EC_FRONT_JS_CONFIG_MANAGE = {"sSmartBannerScriptUrl":"https:\/\/app4you.cafe24.com\/SmartBanner\/tunnel\/scriptTags?vs=1563164396689206","sMallId":"takenstore","sDefaultAppDomain":"https:\/\/app4you.cafe24.com","sWebLogOffFlag":"F"};
+var EC_FRONT_JS_CONFIG_MEMBER = {"sAuthUrl":"https:\/\/i-pin.cafe24.com\/certify\/1.0\/?action=auth"};
+</script></body></html>
