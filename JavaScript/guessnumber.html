@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container col-6">
+        <div class="btn-wrap d-flex justify-content-center mt-5 mb-5">
+            <button onclick="start()" type="button" class="btn btn-outline-secondary col-4" id="btn_start">開始</button>
+            <button type="button" class="btn btn-outline-secondary col-4" id="btn_restart"
+                onclick="restart()">放棄重來</button>
+            <button type="button" class="btn btn-outline-secondary col-4" id="btn_checkanswer"
+                onclick="checkanswer()">看答案</button>
+        </div>
+        <div class="showguessnumber mb-5" id="showguessnumber">
+            <!-- <div class="input-group-text bg-light">
+                <span class="input-group-text bg-danger text-white font-weight-bold m-1 mr-3">1A1B</span>
+                <span>1234</span>
+            </div>
+            <div class="input-group-text bg-light">
+                <span class="input-group-text bg-danger text-white font-weight-bold m-1 mr-3">2A0B</span>
+                <span>2134</span>
+            </div>
+            <div class="input-group-text bg-light">
+                <span class="input-group-text bg-danger text-white font-weight-bold m-1 mr-3">0A1B</span>
+                <span>5678</span>
+            </div>
+            <div class="input-group-text bg-light">
+                <span class="input-group-text bg-danger text-white font-weight-bold m-1 mr-3">0A1B</span>
+                <span>7890</span>
+            </div>
+            <div class="input-group-text bg-light">
+                <span class="input-group-text bg-success text-white font-weight-bold m-1 mr-3">4A0B</span>
+                <span>0136</span>
+            </div> -->
+        </div>
+        <div class="input-group mb-3 ">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-light">猜答案</span>
+            </div>
+            <input type="text" class="form-control" id="input_answer" placeholder="" aria-label=""
+                aria-describedby="basic-addon1">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary" id="btn_guess" type="button" onclick="guess()">猜!</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btn_start").disabled = false;
+        document.getElementById("btn_restart").disabled = true;
+        document.getElementById("btn_checkanswer").disabled = true;
+        document.getElementById("input_answer").disabled = true;
+        document.getElementById("btn_guess").disabled = true;
+        //先產生4個亂數(數字不同)
+        var answer = 0 //字串
+        var numberrand = []
+
+
+        let showguessnumber = document.querySelector('.showguessnumber')
+        let div = document.createElement('div')
+
+        //產生新亂數
+        function start() {
+            document.getElementById("btn_start").innerText = "開始"
+            document.getElementById("btn_start").disabled = true;
+            document.getElementById("btn_restart").disabled = false;
+            document.getElementById("btn_checkanswer").disabled = false;
+            document.getElementById("input_answer").disabled = false;
+            document.getElementById("btn_guess").disabled = false;
+            for (let i = 0; i < 4; i++) { //i=2
+                numberrand[i] = Math.floor(Math.random() * 10)
+                for (let j = 0; j < i; j++) { //j=0
+                    if (numberrand[i] == numberrand[j]) {
+                        i--;
+                        break;
+                    }
+                }
+            }
+            answer = 0
+            answer = numberrand.join('');
+            deleteChild();
+            
+        }
+
+        function deleteChild() {
+            var e = document.querySelector(".showguessnumber");
+            var first = e.firstElementChild;
+            while (first) {
+                first.remove();
+                first = e.firstElementChild;
+            }
+        }
+
+
+        //放棄重來
+        function restart() {
+            document.getElementById("btn_start").disabled = false;
+            document.getElementById("btn_restart").disabled = true;
+            document.getElementById("btn_checkanswer").disabled = true;
+            document.getElementById("input_answer").disabled = true;
+            document.getElementById("btn_guess").disabled = true;
+            
+        }
+
+        function checkanswer() {
+            alert(`答案為${answer}`)
+        }
+
+
+
+
+        function guess() {
+            if(document.getElementById('input_answer').value.length==0){
+                alert('請輸入數字')
+            }
+            else{
+            let showguessnumber = document.querySelector('.showguessnumber')
+            let div = document.createElement('div')
+            let firstspan = document.createElement('span')
+            let secondspan = document.createElement('span')
+            showguessnumber.appendChild(div)
+            div.className = 'input-group-text bg-light show '
+            div.appendChild(firstspan)
+            div.appendChild(secondspan)
+
+            //firstspan.className = 'input-group-text bg-danger text-white font-weight-bold m-1 mr-3' //判斷紅綠背景
+
+            //1.先取得我textbox中的值並回傳至(dom產生的第二個span)
+            var input_answer = document.getElementById('input_answer').value
+            //alert(input_answer);
+            secondspan.innerText = input_answer
+            var a = 0
+            var b = 0
+            //2.輸入的textbox(input_answer)與產生的亂數，比對有幾A幾B，將ab的值存起來並回傳進框框列(dom產生的第一個span)
+            for (var i = 0; i < 4; i++) {
+                for (var j = 0; j < 4; j++) {
+                    if (answer[i] == input_answer[j]) {
+                        if (i == j) {
+                            a++;
+                            break;
+                        }
+                        b++;
+                    }
+                }
+            }
+            //alert(a);
+            // alert(b);
+            firstspan.innerText = `${a}A${b}B`
+            document.getElementById('input_answer').value=""
+        
+            //3.if(產生的亂數==我在textbox中輸入的數字){
+            //     span中的class會等於bg - success
+            // } else {
+            //     span中的class會等於bg - danger
+            // }
+            // }
+            if (answer == input_answer) {
+                firstspan.className = 'input-group-text text-white font-weight-bold m-1 mr-3 bg-success' //判斷紅綠背景
+                alert('贏了');
+                document.getElementById("btn_restart").disabled = true;
+                document.getElementById("btn_checkanswer").disabled = true;
+                document.getElementById("btn_guess").disabled = true;
+                document.getElementById("btn_start").disabled = false;
+                document.getElementById("input_answer").disabled = true;
+                document.getElementById("btn_start").innerText = "重新開始"
+                // showguessnumber.remove(div);
+
+            } else {
+                firstspan.className = 'input-group-text text-white font-weight-bold m-1 mr-3 bg-danger' //判斷紅綠背景
+            }
+            }
+        
+
+        }
+
+
+
+
+
+
+
+
+        // answer = numberrand
+        // var j = 0;
+        // for(var i = 0 ; i < 4 ; i++){// i=3 j=0
+        //     numberrand[i] = Math.floor(Math.random() * 10) //6 7 8 9
+        //     j=0;
+        //     while(i>j){
+        //         if(numberrand[i]==numberrand[j]){
+        //             numberrand[i] = Math.floor(Math.random() * 10)
+        //             j=0;
+        //         }else{
+        //             j++;
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+
+</html>
