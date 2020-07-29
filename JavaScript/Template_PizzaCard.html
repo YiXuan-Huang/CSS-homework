@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .card {
+            border: 1px solid black;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        .headshot {
+            overflow: hidden;
+        }
+
+        .card-title {
+            color: white;
+            background-color: black;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 5px 15px 5px 15px;
+        }
+
+        .card-body {
+            background-color: #ffbf67;
+        }
+
+        .card:hover {
+            box-shadow: 8px 8px 15px #808080;
+            transform: translate(5px, 5px);
+        }
+
+        .card:hover img {
+            transform: scale(1.2);
+            transition: transform 0.5s;
+        }
+
+        .card:not(:hover) img {
+            transform: scale(1, 1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover .card-body {
+            background-color: lightgreen !important;
+        }
+
+        .card:hover .card-title {
+            color: black;
+            background-color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container-fluid'>
+        <div class='jumbotron'>Pizza Template</div>
+        <div class='row'>
+        </div>
+    </div>
+
+    <template id='cardPizza'>
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <button href="#" class="btn btn-primary">詳細內容</a>
+            </div>
+        </div>
+    </template>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="pizzaImage">
+                    <h1 id="description" class="text-primary"></h1>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script type='module'>
+        import { $g } from '../Modules/helpers.js';
+        let row = $g('.row');
+        // window.onload = function () {
+        //     let card = $g('#cardPizza');
+        //     let cloneContent = card.content.cloneNode(true);
+        //     cloneContent.querySelector('h5').innerText = "炭火肉食披薩";
+        //     cloneContent.querySelector('img').src ="https://www.0800076666.com.tw/Files/MenuPizza/62/%E7%82%AD%E7%81%AB%E8%82%89%E9%A3%9F.png"
+
+        //     cloneContent.querySelector('.btn').addEventListener('click',function(){
+        //         //alert("炭火肉食披薩");
+        //         this.setAttribute("data-toggle","modal");
+        //         this.setAttribute("data-target","#exampleModal");
+        //         let modal =$g('#exampleModal');
+        //         modal.querySelector('h5').innerText="炭火肉食披薩";
+        //         //modal.querySelector('.modal-body').innerHTML="<h1>炭火肉食披薩<h1>";
+        //         modal.querySelector('#pizzaImage').src="https://www.0800076666.com.tw/Files/MenuPizza/62/%E7%82%AD%E7%81%AB%E8%82%89%E9%A3%9F.png";
+        //         modal.querySelector('#description').innerText="炭火肉食披薩";
+        //     });
+        //     row.append(cloneContent);
+        // }
+        window.onload = function(){
+            for(var i =0;i<pizzas.pizza.length;i++){
+                
+                let card = $g('#cardPizza');
+                let cloneContent = card.content.cloneNode(true);
+                cloneContent.querySelector('h5').innerText = pizzas.pizza[i].name;
+                cloneContent.querySelector('img').src = pizzas.pizza[i].image
+
+
+                cloneContent.querySelector('.btn').addEventListener('click',function(){
+                //alert("炭火肉食披薩");
+                this.setAttribute("data-toggle","modal");
+                this.setAttribute("data-target","#exampleModal");
+                let modal =$g('#exampleModal');
+                modal.querySelector('h5').innerText= pizzas.pizza[i-1].name;
+                //modal.querySelector('.modal-body').innerHTML="<h1>炭火肉食披薩<h1>";
+                modal.querySelector('#pizzaImage').src=pizzas.pizza[i].image;
+                modal.querySelector('#description').innerText=pizzas.pizza[i-1].name;
+            });
+            row.append(cloneContent);
+            
+            
+        }
+    }
+    </script>
+    <script>
+        var pizzas = {
+            "pizza": [{
+                    "name": "炭火燒肉披薩",
+                    "name-en": "Mear Lovers",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/62/%E7%82%AD%E7%81%AB%E8%82%89%E9%A3%9F.png",
+                    "price": {
+                        "large": 329,
+                        "small": 229
+                    }
+                },
+                {
+                    "name": "美式嗆司臘腸披薩",
+                    "name-en": "Jalapeno Sausage",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/26/%E7%BE%8E%E5%BC%8F%E5%97%86%E5%8F%B8%E8%87%98%E8%85%B8.png",
+                    "price": {
+                        "large": 329,
+                        "small": 229
+                    }
+
+                },
+                {
+                    "name": "龍蝦沙拉披薩",
+                    "name-en": "Lobster Salad Pizza",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/30/%E9%BE%8D%E8%9D%A6%E6%B2%99%E6%8B%89.png",
+                    "price": {
+                        "large": 329,
+                        "small": null
+                    }
+
+                },
+                {
+                    "name": "總匯披薩",
+                    "name-en": "Supreme",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/31/%E7%B8%BD%E5%8C%AF.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "墨西哥嗆辣披薩",
+                    "name-en": "Mexican(Spicy)Pizza",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/28/%E5%A2%A8%E8%A5%BF%E5%93%A5%E8%BE%A3%E6%A4%92.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "西西里燻雞披薩",
+                    "name-en": "House Smoked Chicken",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/32/%E7%87%BB%E9%9B%9E.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "海鮮披薩",
+                    "name-en": "Seafood",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/33/%E6%B5%B7%E9%AE%AE.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "地中海漁夫披薩",
+                    "name-en": "Mediterranean Fisherman",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/64/%E5%9C%B0%E4%B8%AD%E6%B5%B7%E6%BC%81%E5%A4%AB.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "夏威夷披薩",
+                    "name-en": "Hawaiian",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/35/%E5%A4%8F%E5%A8%81%E5%A4%B7.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "蔬菜披薩(奶素)",
+                    "name-en": "Vegetarian",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/36/%E8%94%AC%E8%8F%9C.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "蘋果肉桂披薩",
+                    "name-en": "Apple Cinnamon Pizza",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/27/%E8%98%8B%E6%9E%9C%E8%82%89%E6%A1%82.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "義式海陸豪華披薩",
+                    "name-en": "Deluxe",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/37/%E6%B5%B7%E9%99%B8.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "洋食黃金脆雞披薩",
+                    "name-en": "Popcorn Chicken",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/38/%E9%BB%83%E9%87%91%E8%84%86%E9%9B%9E.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "波隆那臘腸披薩",
+                    "name-en": "Bologna Sausage",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/39/%E6%B3%A2%E9%9A%86%E7%B4%8D.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                },
+                {
+                    "name": "日式燒肉披薩",
+                    "name-en": "Japanese BBQ pork",
+                    "image": "https://www.0800076666.com.tw/Files/MenuPizza/65/%E7%87%92%E8%82%89.png",
+                    "price": {
+                        "large": 329,
+                        "small": 299
+                    }
+
+                }
+            ]
+        }
+    </script>
+</body>
+
+</html>
