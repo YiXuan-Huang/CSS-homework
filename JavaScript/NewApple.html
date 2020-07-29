@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="img col-6" id="bigimg">
+            <!-- <img src="Applepic/ipad-hero-unselected-201909_GEO_TW.jfif" alt="" class="img-fluid "> -->
+        </div>
+        <div class="col-6">
+            <div class="titlewrap">
+                <!-- <h1>購買iPad</h1>
+                <span>購買 iPad 可享免額外付費運送服務。</span> -->
+            </div>
+            <div class="outward">
+                <!-- <h6>外觀</h6> -->
+                <!-- <div class="colorcontainer d-flex flex-wrap">
+                    <a href="#"
+                        class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light"
+                        onclick="space()">
+                        <img src="Applepic/finish-spacegray-201903.png" alt="" class="img-fluid " width="40">
+                        <p class="mb-0">太空灰色</p>
+                    </a>
+                    <a href="#" class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded
+                        bg-light" onclick="silver()">
+                        <img src="Applepic/finish-silver-201903.png" alt="" class="img-fluid" width="40">
+                        <p class="mb-0">銀色</p>
+                    </a>
+                    <a href="#" class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded
+                        bg-light" onclick="gold()">
+                        <img src="Applepic/finish-gold-201903.png" alt="" class="img-fluid" width="40">
+                        <p class="mb-0">金色</p>
+                    </a>
+                </div> -->
+            </div>
+            <div class="storageinfo">
+                <!-- <h6>儲存裝置</h6>
+                <div class="storagewrap d-flex">
+                    <a href="#"
+                        class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light"
+                        onclick="silver()">
+                        <p>32GB</p>
+                        <p>NT$10,900起</p>
+                    </a>
+                    <a href="#"
+                        class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light"
+                        onclick="gold()">
+                        <p>128GB</p>
+                        <p>NT$13,900起</p>
+                    </a></div> -->
+            </div>
+            <div class="connect">
+                <!-- <h6>連線能力</h6>
+                <div class="storagewrap d-flex">
+                    <a href="#"
+                        class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light"
+                        onclick="silver()">
+                        <p>Wi-Fi</p>
+                        <p>NT$10,900起</p>
+                    </a>
+                    <a href="#"
+                        class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light"
+                        onclick="gold()">
+                        <p>Wi-Fi+行動網路</p>
+                        <p>NT$15,400起</p>
+                    </a></div> -->
+            </div>
+            <div class="price bg-light rounded d-flex flex-column p-3 align-items-center ">
+                <!-- <p>NT$10,900起</p>
+                <button class="bg-primary text-white col-12">
+                    繼續
+                </button> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        //左邊大張的圖片
+        var bigimg = document.createElement('img')
+        document.getElementById('bigimg').append(bigimg)
+        bigimg.src = 'Applepic/ipad-hero-unselected-201909_GEO_TW.jfif'
+        bigimg.setAttribute('class', 'img-fluid')
+
+        //右邊標題的文字
+        var txth1 = document.createElement('h1')
+        var txtspan = document.createElement('span')
+        document.querySelector('.titlewrap').append(txth1, txtspan)
+        txth1.innerText = '購買iPad'
+        txtspan.innerText = '購買 iPad 可享免額外付費運送服務。'
+
+        //右邊變換顏色
+        var outwardh6 = document.createElement('h6')
+        var outwarddiv = document.createElement('div')
+        document.querySelector('.outward').append(outwardh6, outwarddiv)
+        outwardh6.innerText = '外觀'
+        outwarddiv.className = 'colorcontainer d-flex flex-wrap'
+        var outwardanchor = document.createElement('a')
+        // outwarddiv.innerHTML =
+        //     `<a class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light" 
+        //     onclick="space()">
+        //     <img src="Applepic/finish-spacegray-201903.png" alt="" class="img-fluid " width="40">
+        //     太空灰色
+        //     </a> 
+        //     <a class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light" 
+        //     onclick="silver()">
+        //     <img src="Applepic/finish-silver-201903.png" alt="" class="img-fluid" width="40">
+        //     銀色
+        //     </a> 
+        //     <a class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light"
+        //     onclick="gold()">
+        //     <img src="Applepic/finish-gold-201903.png" alt="" class="img-fluid" width="40">
+        //     金色
+        //     </a>`
+
+        var IpadArray = {
+            Color: [{
+                colorimg: [
+                    'Applepic/finish-spacegray-201903.png',
+                    'Applepic/finish-silver-201903.png',
+                    'Applepic/finish-gold-201903.png'
+                ],
+                colorname: [
+                    '太空灰色', '銀色', '金色'
+                ],
+                coloronclick: ['space', 'silver', 'gold']
+            }, ],
+            StorageDevice: [{
+                storagename: [
+                    '32GB', '128GB'
+                ],
+                storageprice: [
+                    10900, 13900
+                ]
+            }],
+            ConnectWiFi: [{
+                name: [
+                    'Wi-Fi', 'Wi-Fi + 行動網路'
+                ],
+                wifiprice: [0, 4500]
+            }]
+        }
+
+
+        for (var i = 0; i < IpadArray.Color[0].colorimg.length; i++) {
+            outwarddiv.innerHTML +=
+                `<a class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light" 
+            onclick="${IpadArray.Color[0].coloronclick[i]}()">
+            <img src=${IpadArray.Color[0].colorimg[i]} alt="" class="img-fluid " width="40">
+            ${IpadArray.Color[0].colorname[i]}
+            </a>`
+        }
+
+
+        //儲存裝置
+        var storageinfo = document.querySelector('.storageinfo')
+        // storageinfo.innerHTML = `<h6>儲存裝置</h6>
+        // <div class="storagewrap d-flex">
+        //             <a href="#"
+        //                 class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light">
+        //                 <p>32GB</p>
+        //                 <p>NT$10,900起</p>
+        //             </a>
+        //             <a href="#"
+        //                 class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light">
+        //                 <p>128GB</p>
+        //                 <p>NT$13,900起</p>
+        //             </a>
+        //     </div>`
+        storageinfo.innerHTML = `<h6>儲存裝置</h6>
+            <div class="storagewrap d-flex"></div>`
+        var storagewrap = document.querySelector('.storagewrap')
+        for (var i = 0; i < IpadArray.StorageDevice[0].storagename.length; i++) {
+            storagewrap.innerHTML +=
+                `<a href="#"
+                    class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light storageanchor" onclick='CalPrice()'>
+                    <p>${IpadArray.StorageDevice[0].storagename[i]}</p>
+                    <p>NT$${IpadArray.StorageDevice[0].storageprice[i]}起</p>
+                </a>`
+        }
+
+
+
+
+        //連線能力
+        var connect = document.querySelector('.connect')
+        connect.innerHTML = `<h6>連線能力</h6>
+                <div class="connectwrap d-flex">
+                    <a href="#"
+                        class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light"
+                        onclick="tip(this)">
+                        <p>Wi-Fi</p>
+                        <p>NT$10,900起</p>
+                    </a>
+                    <a href="#"
+                        class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light"
+                        onclick="tip(this)">
+                        <p>Wi-Fi+行動網路</p>
+                        <p>NT$15,400起</p>
+                    </a></div>`
+
+        ///////=====================我寫到這邊===============================
+
+        // var btn1 = document.querySelectorAll(".connectwrap a ");
+
+        // for (let i = 0; i < btn1.length; i++) {
+        //     btn1[i].addEventListener("click", function () {
+        //         var sum = document.querySelectorAll(".connectwrap a p:nth-child(2)")[0];
+        //         // sum[i].addEventListener("click")
+
+        //         var price1 = document.querySelector('.price p')
+        //         price1.innerText=`${sum.innerText}`
+        //     });
+        // }
+
+
+
+        var btn = document.querySelectorAll(".storageanchor");
+
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", function () {
+                for (var j = 0; j < IpadArray.ConnectWiFi[0].wifiprice.length; j++) {
+
+                    var connectwrappp = document.querySelector(
+                        `.connectwrap a:nth-child(${j+1}) p:nth-child(2)`)
+                    connectwrappp.innerText =
+                        `NT$${IpadArray.StorageDevice[0].storageprice[i]+IpadArray.ConnectWiFi[0].wifiprice[j]}起`
+
+                }
+            });
+        }
+
+
+
+
+
+        // connect.innerHTML = `<h6>連線能力</h6>
+        //         <div class="connectwrap d-flex"></div>`
+        // var connectwrap = document.querySelector('.connectwrap')
+        // for (var i = 0; i < IpadArray.StorageDevice[0].storagename.length; i++) {
+        //     connectwrap.innerHTML =
+        //         `<a href="#"
+        //                 class="p-3 m-2 col-5 d-flex flex-column align-items-center text-decoration-none text-dark border border-secondary rounded bg-light
+        //                 connectwrapanchor">
+        //                 <p>${IpadArray.ConnectWiFi[0].name[i]}</p>
+        //                 <p>NT${IpadArray.StorageDevice[0].storageprice[i]}起</p>
+        //         </a>`
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //價錢計算
+        var price = document.querySelector('.price')
+        price.innerHTML = `<p>NT${IpadArray.StorageDevice[0].storageprice[0]}起</p>
+                <button class="bg-primary text-white col-12">
+                    繼續
+                </button>`
+        //===================以上都是DOM操作===================
+
+
+        //function變換顏色
+        function space() {
+            // var spacepic ="Applepic/ipad-wifi-select-space-201909_GEO_TW.png"
+            bigimg.src = "Applepic/ipad-wifi-select-space-201909_GEO_TW.png"
+        }
+
+        function silver() {
+            bigimg.src = "Applepic/ipad-wifi-select-silver-201909_GEO_TW.png"
+        }
+
+        function gold() {
+            bigimg.src = "Applepic/ipad-wifi-select-gold-201909_GEO_TW.png"
+        }
+
+
+
+        function tip(o) {
+
+            // var input = document.querySelector("input[id='bill']");
+            // var total = input.value * o.innerHTML;
+
+            // document.querySelector("#tip").innerHTML = "&#36;" + total;
+            
+
+            var price1 = document.querySelector('p:nth-child(2)')
+
+
+
+            document.querySelector('.price p').innerHTML = o.innerText;
+
+        }
+        // var btn = document.querySelectorAll(".storageanchor");
+
+        // for (let i = 0; i < btn.length; i++) {
+        //     btn[i].addEventListener("click", function () {
+        //         for (var j = 0; j < IpadArray.ConnectWiFi[0].wifiprice.length; j++) {
+
+        //             var connectwrappp = document.querySelector(
+        //                 `.connectwrap a:nth-child(${j+1}) p:nth-child(2)`)
+        //             connectwrappp.innerText =
+        //                 `NT$${IpadArray.StorageDevice[0].storageprice[i]+IpadArray.ConnectWiFi[0].wifiprice[j]}xxx起`
+
+
+
+        //             // var pricep = document.querySelector('.price p')
+        //             // pricep.innerText=`NT${IpadArray.StorageDevice[0].storageprice[i]+IpadArray.ConnectWiFi[0].wifiprice[j]}xxx起`
+        //         }
+        //     });
+        // }
+
+        // storagearray: [{
+        //         capacity: '32gb',
+        //         wifiprice: [10900, 15400]
+        //     },
+        //     {
+        //         capacity: '128gb',
+        //         wifiprice: [13900, 18400]
+        //     }
+        // ]
+
+        //儲存裝置
+    </script>
+</body>
+
+</html>
