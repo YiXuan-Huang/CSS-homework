@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/05c128ff7b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container rounded mt-5 bg-info p-3 col-6">
+        <div class="show text-right text-white">
+            <input type="text" class="bg-secondary text-white col border-0 p-3 text-right" value="0" id="show">
+        </div>
+        <div class="btn_digital mt-5">
+            <div class="row ">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="7" onclick="show('7')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="8" onclick="show('8')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="9" onclick="show('9')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="÷" onclick="operate('/')">
+                <!-- <button class="bg-secondary text-white col border-0 p-3">7</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">8</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">9</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">÷</button> -->
+            </div>
+            <div class="row">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="4" onclick="show('4')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="5" onclick="show('5')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="6" onclick="show('6')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="x" onclick="operate('*')">
+                <!-- <button class="bg-secondary text-white col border-0 p-3">4</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">5</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">6</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">x</button> -->
+            </div>
+            <div class="row">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="1" onclick="show('1')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="2" onclick="show('2')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="3" onclick="show('3')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="+" onclick="operate('+')">
+                <!-- <button class="bg-secondary text-white col border-0 p-3">1</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">2</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">3</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">+</button> -->
+            </div>
+            <div class="row">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="0">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="00">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="." onclick="show('.')">
+                <input type="button" class="bg-secondary text-white col border-0 p-3" value="-" onclick="operate('-')">
+                <!-- <button class="bg-secondary text-white col border-0 p-3">0</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">00</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">.</button> -->
+                <!-- <button class="bg-secondary text-white col border-0 p-3">-</button> -->
+            </div>
+            <div class="row">
+                <input type="button" class="bg-secondary text-white col border-0 p-3 no-show" value="AC" onclick="operate('AC')">
+                <!-- <button class="bg-secondary text-white col-3 border-0 p-3"><i class="fas fa-backspace"></i></button> -->
+                <input type="button" class="bg-secondary text-white col border-0 p-3 no-show" value="="  onClick="mathematical()">
+                <!-- <button class="bg-secondary text-white col-3 border-0 p-3">AC</button> -->
+                <!-- <button class="bg-secondary text-white col-3 border-0 p-3"><i class="fas fa-backspace"></i></button> -->
+                <!-- <button class="bg-secondary text-white col-6 border-0 p-3">=</button> -->
+            </div>
+        </div>
+
+
+
+
+
+<script>
+    // document.getElementById("myBtn").addEventListener("click", function () {
+    //     document.getElementById("demo").innerHTML = "Hello World";
+    // });
+    // var show = document.getElementById("show");
+    // document.onclick = function () {
+    //     var obj = event.srcElement;
+    //     if (obj.type == "button" && obj.className"no-show") {
+
+    //         show.innerText+=obj.value
+    //     }
+    // }
+
+
+
+    var sum = 0 //var temp=0; 
+    var sumnum = 0//var strOper=0
+
+    function show(str) {
+        if (sumnum == null) {
+            document.getElementById("show").value = str
+            sumnum = 0;
+            return
+        }
+        if (document.getElementById("show").value == 0) {
+            document.getElementById("show").value = str;
+        } else {
+            document.getElementById("show").value += str
+        }
+    }
+
+    function operate(str) {
+
+        mathematical();
+        valueA = document.getElementById("show").value;
+        sumnum = str;
+
+        document.getElementById("show").value = 0;
+    }
+
+    function mathematical() {
+        switch (sumnum) {
+            case '+':
+                document.getElementById("show").value = parseFloat(valueA) + parseFloat(document.getElementById("show")
+                    .value);
+                break;
+            case '-':
+                document.getElementById("show").value = parseFloat(valueA) - parseFloat(document.getElementById("show")
+                    .value);
+                break;
+            case '*':
+                document.getElementById("show").value = parseFloat(valueA) * parseFloat(document.getElementById("show")
+                    .value);
+                break;
+            case '/':
+                document.getElementById("show").value = parseFloat(valueA) / parseFloat(document.getElementById("show")
+                    .value);
+                break;
+            case 'AC':
+            sum = 0,sumnum = 0
+            default:
+                break;
+        }
+            sum = null // temp=null; 
+            sumnum = null// strOper=null
+    }
+</script>
+</body>
+
+</html>
