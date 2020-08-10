@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/05c128ff7b.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBgK7BIKTiX42BzHs7vIwPqDYB2LbLvqY&callback=initMap&libraries=&v=weekly"
+        defer>
+    </script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+        #map {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1000px;
+            height: 100vh
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="information">
+        <h1 id="logo">口罩地圖</h1>
+        <div class="legend">
+            <div class="sufficient">50%以上</div>
+            <div class="warning">49%~21%</div>
+            <div class="emergency">20%以下</div>
+            <div class="sold-out">無存貨</div>
+        </div>
+        <div class="icon-information">
+            <div class="item">
+                <div class="area"></div><span>附近有 2 間以上的藥局</span>
+            </div>
+            <div class="item">
+                <img src="images/sufficient.svg" alt="藥局圖標"><span>藥局</span>
+            </div>
+        </div>
+        <ul id="description">
+            <li>地圖上的圖標皆可以點擊，藥局的詳細資訊在點擊該藥局的圖標後會顯示</li>
+            <li>部分藥局因採發放號碼牌方式，方便民眾購買口罩，系統目前無法顯示已發送號碼牌數量</li>
+            <li>口罩數量以藥局實際存量為主，線上查詢之數量僅供參考</li>
+            <li>若您的藥局有需要加註的公告事項，可以填寫表單：<a href="https://pse.is/KH7DC" target="_blank">https://pse.is/KH7DC</a></li>
+            <li>填寫的資料會不定期匯出到：<a href="https://pse.is/QDSMW" target="_blank">https://pse.is/QDSMW</a></li>
+            <li>口罩地圖的更新紀錄：<a href="https://github.com/chengkai505/Mask-Map/commits/master">ChangeLog</a></li>
+            <li>口罩地圖的原始碼：<a href="https://github.com/chengkai505/Mask-Map/">GitHub</a></li>
+        </ul>
+        <div class="copyright">Copyright 2020 by <a href="https://www.facebook.com/kai73002981">Kai Wu</a></div>
+    </div>
+    <div id="map"></div>
+
+
+    <script>
+        // let map;
+        
+
+        function initMap(maskObject) {
+
+            
+
+
+            var Mask = maskObject;
+            var myLat = [] //25.041829
+            var myLng = [] //121.536266
+            var name = []
+            var address = []
+            var phone = []
+            var mask_adult = []
+            var mask_child = []
+            for (var i = 0; i < Mask.features.length; i++) {
+                myLat.push(Mask.features[i].geometry.coordinates[1])
+                myLng.push(Mask.features[i].geometry.coordinates[0])
+                name.push(Mask.features[i].properties.name)
+                address.push(Mask.features[i].properties.address)
+                phone.push(Mask.features[i].properties.phone)
+                mask_adult.push(Mask.features[i].properties.mask_adult)
+                mask_child.push(Mask.features[i].properties.mask_child)
+            }
+            // console.log(Mask.features[1].geometry.coordinates[1])
+            // console.log(Mask.features.length)
+            // console.log(Mask.features[4].properties.name)
+            // console.log(Mask.features[0].properties.address)
+            console.log(name)
+
+            // console.log(myLat)
+            // console.log(myLng)
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 12,
+                center: new google.maps.LatLng(25.041829, 121.536266),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+
+            });
+
+
+
+
+
+
+            var infowindow = new google.maps.InfoWindow();
+
+            var marker, i;
+            var gmarkers = [];
+
+
+            for (i = 0; i < Mask.features.length; i++) {
+                if (mask_adult[i] == 0 && mask_child[i] == 0) {
+
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(myLat[i], myLng[i]),
+                        map: map,
+                        icon: 'images/sad.png'
+                    });
+                } else {
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(myLat[i], myLng[i]),
+                        map: map,
+                        icon: 'images/smile.png'
+                    });
+                }
+
+                gmarkers.push(marker);
+
+
+
+
+
+
+
+
+
+
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        contentString = `<div id="content">
+                        <div id="siteNotice">
+                        </div>
+                        <h5 id="firstHeading" class="firstHeading">${name[i]}</h5>
+                        <div id="bodyContent d-flex">
+                        <i class="fas fa-map-marker-alt"></i><span class="p-2 mt-2">${address[i]}</span>
+                        <br>
+                        <i class="fas fa-phone"></i><span class="p-2 mt-2">${phone[i]}</span>
+                        </>
+                        <div class="bg-primary rounded text-white p-2 mt-2">大人:${mask_adult[i]}小孩:
+                            ${mask_child[i]}</div>
+                        </div>`
+                        // infowindow.setContent(name[i]);
+                        // infowindow.setContent(address[i]);
+                        infowindow.setContent(contentString);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+
+
+            }
+
+            
+            var markerCluster = new MarkerClusterer(map, gmarkers);
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let xhr = new XMLHttpRequest();
+        const url = "https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json";
+        xhr.onload = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText)
+                //msg.innerText = this.responseText;
+                let maskObject = JSON.parse(this.responseText);
+                console.log(maskObject)
+                initMap(maskObject)
+            }
+        }
+        xhr.open('GET', url);
+        xhr.send();
+    </script>
+
+</body>
+
+</html>
