@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        button {
+            border: none;
+            background-color: #6c757d;
+            color: #fff;
+            padding: 10px;
+        }
+
+        th,
+        td {
+            width: calc(100%/7);
+            padding: 10px;
+            height: 100%;
+        }
+
+        td:hover {
+            color: #fff;
+            background-color: #ccc;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/05c128ff7b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="title bg-secondary d-flex justify-content-between align-items-center">
+            <div class="btnPre">
+                <button onclick="btnPreMonth()"><i class="fas fa-angle-left"></i></button>
+            </div>
+            <!-- <h1 class="text-center text-white p-2">8月,2020</h1> -->
+            <h1 class="text-center text-white p-2">8月,2020</h1>
+            <div class="btnNext">
+                <button onclick="btnNextMonth()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <table class="w-100 text-center" border="1">
+            <thead>
+                <tr>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thr</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <!-- <tbody>
+                <tr>
+                    <td class="td test" data-toggle="modal" data-target="#exampleModal" onclick="what(this)">123</td>
+                    <td class="td test" data-toggle="modal" data-target="#exampleModal" onclick="what(this)">12</td>
+                    <td class="td test" data-toggle="modal" data-target="#exampleModal" onclick="what(this)">1</td>
+                </tr>
+            </tbody> -->
+            <!-- <tbody>
+                <tr>
+                    <td class="" data-toggle="modal" data-target="#exampleModal" style="height: 36px;">
+                        <p class="text-left">123</p>
+                        <div class="schedulewrap">
+                            <p>123</p>
+                            <p>123</p>
+                            <p>123</p>
+                            <p>123</p>
+                            <p>123</p>
+                            <p>123</p>
+                        </div>
+                    </td>
+                    <td class="" data-toggle="modal" data-target="#exampleModal">
+                        <p class="text-left">123</p>
+                        <div class="schedulewrap">
+                            <p>123</p>
+                            <p>123</p>
+                            <p>123</p>
+                        </div>
+                    </td>
+                    <td class="" data-toggle="modal" data-target="#exampleModal">
+                        <p class="text-left">123</p>
+                        <div class="schedulewrap">
+                        </div>
+                    </td>
+                </tr>
+            </tbody> -->
+        </table>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-primary" id="exampleModalLabel">修改事項</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="">標題</label>
+                        <input type="text" class="col-12">
+                        <br>
+                        <label for="">內容</label>
+                        <br>
+                        <textarea class="col-12" rows="12"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary delete" data-dismiss="modal"
+                            onclick="DeleteSchedule()">Delete</button>
+                        <button type="button" class="btn btn-primary edit" onclick="EditSchedule()">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">新增事項</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="">標題</label>
+                    <input type="text" class="col-12" id="ScheduleTitle">
+                    <br>
+                    <label for="">內容</label>
+                    <br>
+                    <textarea name="" class="col-12" rows="12" id="ScheduleContent"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="AddSchedule()">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        let tbody = document.createElement('tbody')
+        let table = document.getElementsByTagName('table')[0]
+
+        table.append(tbody)
+        var DateNow = new Date() //就是現在
+        var year = DateNow.getFullYear() //年
+        var month = DateNow.getMonth() //月
+        var date = DateNow.getDate() //日
+        var tempdate;
+
+        function CreateCalendar() {
+            var h1 = document.querySelector('h1')
+            h1.innerText = `${month+1}月,${year}`
+
+            tbody.innerHTML = ""
+            //先處理第一列
+            let tbodytr = document.createElement('tr')
+            tbody.append(tbodytr)
+            var day = 1;
+            var firstday = new Date(year, month, 1).getDay() //星期六//判斷每個月的第一天是禮拜幾
+            var monthdays = new Date(year, month + 1, 0).getDate() //取8月有幾天//一個月有幾天
+
+            for (let i = 0; i < 7; i++) {
+                let tbodytrtd = document.createElement('td')
+                let div = document.createElement('div')
+                let p = document.createElement('p')
+                if (firstday == 0) {
+                    firstday = firstday + 7
+                }
+                if (i < firstday - 1) {
+                    tbodytr.appendChild(tbodytrtd)
+                } else {
+                    tbodytr.appendChild(tbodytrtd)
+
+                    tbodytrtd.setAttribute('class', 'tbodytrtdaddp')
+                    tbodytrtd.setAttribute('id', `${year}${month+1}${day}`)
+                    tbodytrtd.appendChild(p)
+                    tbodytrtd.appendChild(div)
+                    div.classList = 'schedulewrap'
+                    p.innerText = day
+                    p.classList = "text-left"
+                    day++
+                    ModalCreate(tbodytrtd);
+
+                    tbodytrtd.addEventListener("click", function () {
+                        tempdate = p.innerText;
+
+                    })
+
+                }
+
+
+            }
+            //處理剩下的列數
+            //要計算剩下的列數
+            let rows = Math.ceil((monthdays - day + 1) / 7) //控制有幾列
+            for (let i = 0; i < rows; i++) {
+                let tbodytr = document.createElement('tr')
+                for (let j = 0; j < 7; j++) {
+                    if (day > monthdays) {
+                        break
+                    }
+                    let tbodytrtd = document.createElement('td')
+                    let div = document.createElement('div')
+                    let p = document.createElement('p')
+                    tbodytr.appendChild(tbodytrtd)
+                    tbodytrtd.setAttribute('class', 'tbodytrtdaddp')
+                    tbodytrtd.setAttribute('id', `${year}${month+1}${day}`)
+                    tbodytrtd.appendChild(p)
+                    tbodytrtd.appendChild(div)
+                    div.classList = 'schedulewrap'
+                    p.innerText = day
+                    p.classList = "text-left"
+                    day++
+                    ModalCreate(tbodytrtd)
+                    // debugger
+                    tbodytrtd.addEventListener("click", function () {
+                        tempdate = p.innerText;
+                    })
+                    // debugger
+                }
+                tbody.appendChild(tbodytr)
+
+            }
+
+        }
+        CreateCalendar()
+        ShowSchedule();
+        ShowHeight()
+        // DeleteSchedule()
+        // stopPropagation()
+
+        function btnPreMonth() {
+
+            if (month < 12 && month > 0) {
+                month = month - 1
+            } else {
+                month = month + 11
+                year = year - 1
+            }
+            CreateCalendar()
+            ShowSchedule();
+            ShowHeight()
+            // stopPropagation()
+        }
+
+        function btnNextMonth() {
+            if (month < 11) {
+                month = month + 1
+                console.log(month)
+            } else {
+                month = 0
+                year++
+            }
+            CreateCalendar()
+            ShowSchedule();
+            ShowHeight()
+            // stopPropagation()
+        }
+
+
+        function ModalCreate(tbodytrtd) {
+            tbodytrtd.setAttribute("data-toggle", "modal");
+            tbodytrtd.setAttribute("data-target", "#exampleModal2");
+        }
+
+        function ShowSchedule() {
+            let TdClass = document.getElementsByClassName('tbodytrtdaddp')
+            Array.from(TdClass).forEach((el, index) => {
+                for (let i = 0; i < localStorage.length; i++) {
+                    if (el.id == localStorage.key(i)) {
+                        // duv.classList='schedulewrap'
+                        for (let j = 0; j < JSON.parse(localStorage.getItem(`${localStorage.key(i)}`))
+                            .length; j++) {
+
+                            let p = document.createElement('p')
+                            // let div = document.querySelector(('#' + CSS.escape(`${el.id}`)+'.'+CSS.escape(schedulewrap)));
+                            let schedulewrap = document.querySelectorAll(`.tbodytrtdaddp .schedulewrap`)[index]
+                            let titleshowinputtxt = document.querySelector('#exampleModal input')
+                            let contentshowtextarea = document.querySelector('#exampleModal textarea')
+
+                            // let scheduleindex = 0
+                            schedulewrap.appendChild(p)
+                            p.innerText = JSON.parse(localStorage.getItem(el.id))[j].title
+                            p.setAttribute("data-toggle", "modal");
+                            p.setAttribute("data-target", "#exampleModal");
+                            p.setAttribute("index", `${j}`)
+
+                            p.addEventListener("click", function (e) {
+                                e.stopPropagation();
+
+                            })
+                            // let pp
+                            p.addEventListener("click", function () {
+                                $("#exampleModal").modal('show');
+                                let edititem = document.getElementById('exampleModalLabel')
+                                edititem.innerHTML = `修改事項<p id=name>${year}${month+1}${index+1}</p>`
+                                // titleshowinputtxt.value = `${this.innerText}`
+                                titleshowinputtxt.value = JSON.parse(localStorage.getItem(el.id))[j]
+                                    .title
+                                contentshowtextarea.value = JSON.parse(localStorage.getItem(el.id))[j]
+                                    .Content
+                                console.log(p.getAttribute('index'))
+                            
+
+                                //刪除
+                                let deletebtn = document.querySelector('#exampleModal .delete')
+                                deletebtn.onclick = function () {
+                                    let elid = document.getElementById('name').innerText
+                                    let items = JSON.parse(localStorage.getItem(elid))
+                                    // let index = el.getAttribute('index')
+                                    // let indexx = document
+                                    items.splice(j, 1);
+                                    // JSON.parse(localStorage.getItem(elid)).splice(j, 1)
+                                    items = JSON.stringify(items);
+                                    localStorage.setItem(elid, items)
+                                    CreateCalendar()
+                                    ShowSchedule();
+                                    ShowHeight()
+                                    
+                                }
+
+
+                                //修改
+                                let editbtn = document.querySelector('#exampleModal .edit')
+                                editbtn.onclick = function(){
+                                    // titleshowinputtxt.value=
+                                    // document.querySelector('#exampleModal input').value
+                                    // titleshowinputtxt.value=
+                                    // contentshowtextarea.value
+                                    let elid = document.getElementById('name').innerText
+                                    let items = JSON.parse(localStorage.getItem(elid))
+                                    
+                                    // JSON.parse(localStorage.getItem(elid))[j]//變成陣列型態
+                                    // JSON.parse(localStorage.getItem(elid))[j].title='111111111111'
+                                    items[j]={title:titleshowinputtxt.value ,Content:contentshowtextarea.value}
+                                    // titleshowinputtxt.value
+                                    localStorage.setItem(elid,JSON.stringify(items))
+                                    CreateCalendar()
+                                    ShowSchedule();
+                                    ShowHeight()
+                                    
+                                }
+                                
+                            })
+                            
+                        }
+
+                    }
+                }
+
+            });
+
+        }
+
+        function AddSchedule() {
+
+            let ScheduleTitletemp = document.getElementById('ScheduleTitle').value;
+            // localStorage.setItem('Title',ScheduleTitletemp)
+
+            let ScheduleContenttemp = document.getElementById('ScheduleContent').value;
+            // localStorage.setItem('Content',ScheduleContenttemp)
+
+            // let scheduleindex = document.querySelector('.schedulewrap p')
+            let objectarray = {
+                title: ScheduleTitletemp,
+                Content: ScheduleContenttemp
+            }
+            let object = [];
+
+            if (`${year}${month+1}${tempdate}` in localStorage) {
+                let already = JSON.parse(localStorage.getItem(`${year}${month+1}${tempdate}`))
+                already.push(objectarray)
+                object = already;
+
+            } else {
+                object.push(objectarray)
+            }
+            localStorage.setItem(`${year}${month+1}${tempdate}`, JSON.stringify(object))
+            // debugger
+            CreateCalendar()
+            ShowSchedule()
+            ShowHeight()
+            // stopPropagation()
+        }
+
+        function stopPropagation() {
+            let txtp = document.querySelectorAll('.schedulewrap p')
+            let titleshowinputtxt = document.querySelector('#exampleModal input')
+            let contentshowtextarea = document.querySelector('#exampleModal textarea')
+
+        
+
+
+
+            let TdClass = document.getElementsByClassName('tbodytrtdaddp')
+        }
+
+
+        function DeleteSchedule() {
+
+            // let edititemname = document.getElementById('name')
+            // let deleteitem = document.querySelectorAll('.schedulewrap p')
+            // let elid = document.getElementById('name').innerText//202081
+
+            // let elid = document.getElementById('name').innerText
+            // var items = JSON.parse(localStorage.getItem(elid))
+            // var splice = items.splice(j, 1);
+            // JSON.parse(localStorage.getItem(el.id)).splice(j,1)
+            // items = JSON.stringify(items);
+            // localStorage.setItem(elid, items)
+            CreateCalendar();
+            ShowSchedule();
+            ShowHeight();
+            debugger
+            // document.querySelectorAll(".tbodytrtdaddp .schedulewrap p")[4].getAttribute('index')
+
+
+            // txtp.addEventListener('click', function () {
+
+            // })
+
+
+            // txtp.forEach(element => element.addEventListener("click", function () {
+            //     alert("You clicked region number: " + this.getAttribute('data-region'));
+            // }));
+
+            // Array.from(deleteitem).forEach((el) =>{
+            //     el.addEventListener("click", function () {
+            //         alert(edititemname)
+            //     })
+            // })
+        }
+
+        // let p = document.querySelectorAll('.schedulewrap p')
+        // Array.from(p).forEach(el => {
+        //     el.addEventListener("click", function () {
+        //         console.log(el)
+        //         debugger
+        //         // let elid = document.getElementById('name').innerText//202081
+
+        //         let elid = document.getElementById('name').innerText
+        //         var items = JSON.parse(localStorage.getItem(elid))
+        //         let index = el.getAttribute('index')
+        //         let splice = items.splice(index, 1);
+        //         JSON.parse(localStorage.getItem(elid)).splice(index, 1)
+        //         items = JSON.stringify(items);
+        //         localStorage.setItem(elid, items)
+        //         debugger
+        //     })
+        // })
+
+        function EditSchedule() {
+
+        }
+
+        function ShowHeight() {
+            let schedulewrap = document.getElementsByClassName('schedulewrap')
+            let scheduletext = document.querySelectorAll('.schedulewrap p')
+            Array.from(schedulewrap).forEach((el) => {
+                el.style.height = '50px'
+                el.style.overflow = 'auto'
+            })
+            Array.from(scheduletext).forEach((el) => {
+                el.classList = 'mx-2 mb-1'
+                el.style.backgroundColor = 'pink'
+                // el.style.color = 'white'
+                el.style.borderRadius = '25px'
+                // el.style.width = '80px'
+            })
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+        integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
