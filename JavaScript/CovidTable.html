@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h2></h2>
+    <table>
+        <thead>
+            <tr>
+                <td>國家</td>
+                <td>確診</td>
+                <td>死亡</td>
+                <td>治癒</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>台灣</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>中國</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>美國</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>全球統計</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // 1.建立肺炎資料結構
+        // 2.讀取HTML元素，以innerText或innerHTML設定資料
+        // 3.計算[全球統計數]
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        
+        let title = document.querySelector('h2')
+        title.innerText = '全球肺炎統計'
+        var CovidData={
+            confirmed:[41,80134,9665],
+            death:[1,2914,146],
+            cure:[12,44595,694],
+        }
+        CovidData.confirmed.push(CovidData.confirmed.reduce(reducer))
+        CovidData.death.push(CovidData.death.reduce(reducer))
+        CovidData.cure.push(CovidData.cure.reduce(reducer))
+
+        let confirmed = document.querySelectorAll('tbody tr td:nth-child(2)')
+        let death = document.querySelectorAll('tbody tr td:nth-child(3)')
+        let cure = document.querySelectorAll('tbody tr td:nth-child(4)')
+        let statistics = document.querySelectorAll('tbody tr td:nth-child(5)')
+        for(let i = 0;i<CovidData.confirmed.length;i++){
+            confirmed[i].innerText=CovidData.confirmed[i]
+            death[i].innerText=CovidData.death[i]
+            cure[i].innerText=CovidData.cure[i]
+        }
+        
+    </script>
+</body>
+
+</html>
