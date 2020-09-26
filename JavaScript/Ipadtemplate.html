@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            table-layout: fixed;
+            width: 100%;
+            border-collapse: collapse;
+            border: 3px solid purple;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1></h1>
+    <h2 id="msg">template</h2>
+    <template id="templateTitile">
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </template>
+    <template id="templateRow">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+    <script>
+        let xhr = new XMLHttpRequest();
+        // let msg = document.querySelector('.msg');
+        let url = 'https://raw.githubusercontent.com/YiXuan-Huang/FileStorage/master/iPad.json';
+
+
+        xhr.onload = function () {
+            // msg.innerText = this.responseText;
+            let ipadObject = JSON.parse(this.responseText)
+            // console.log(ipadObject)
+            ipadArray = ipadObject.products;
+            // console.table(ipadArray);
+            let title = Object.keys(ipadArray[0])
+            
+            // console.table(Object.keys(ipadArray[0]))
+            // console.table(Object.values(ipadArray[0]))
+            get();
+            addThead(title)
+            for(let i =0;i<ipadArray.length;i++){
+                let body = Object.values(ipadArray[i])
+                debugger
+                addTbody(body)
+            }
+            
+        }
+        xhr.open('GET', url);
+        xhr.send();
+
+        document.querySelector('h1').innerText = "Template";
+        document.querySelector('#msg').innerText = "模板的應用";
+
+        function get() {
+            thead = document.createElement('thead');
+            tbody = document.createElement('tbody');
+            table = document.createElement('table');
+            table.append(thead);
+            table.append(tbody);
+            body = document.querySelector('body');
+            body.insertBefore(table, document.querySelector('#templateTitile'));
+
+            // let titles = ["產品編號", "售價", "儲存容量", "說明"];
+            // addThead(titles);
+            // // requestIpadJSON()
+            // // const titleArray = Object.keys(ipadArray[0])
+            // let row = ["MW762", 10900, "32GB", "10.2吋 IPAD WI-FI 機"];
+            // addTbody(row);
+        }
+
+        function addThead(titleArray) {
+            let templateTitile = document.querySelector('#templateTitile');
+            let cloneContent = templateTitile.content.cloneNode(true);
+            let ths = cloneContent.querySelectorAll('th');
+
+            titleArray.forEach((item, index) => {
+                ths[index].innerText = item;
+
+            });
+            thead.append(cloneContent);
+        }
+
+
+        function addTbody(rowArray) {
+            let templateRow = document.querySelector('#templateRow');
+            let cloneContent = templateRow.content.cloneNode(true);
+            let tds = cloneContent.querySelectorAll('td');
+
+            rowArray.forEach((item, index) => {
+                tds[index].innerText = item;
+            })
+            debugger
+            tbody.append(cloneContent);
+        }
+    </script>
+</body>
+
+</html>
