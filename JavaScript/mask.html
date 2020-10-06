@@ -14,8 +14,11 @@
         defer>
     </script>
     <style>
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
+       *{
+           margin: 0;
+           padding: 0;
+           list-style: none;
+       }
         #map {
             position: absolute;
             top: 0;
@@ -36,9 +39,9 @@
 </head>
 
 <body>
-    <div id="information">
+    <div id="information" class="col-3">
         <h1 id="logo">口罩地圖</h1>
-        <div class="legend">
+        <!-- <div class="legend">
             <div class="sufficient">50%以上</div>
             <div class="warning">49%~21%</div>
             <div class="emergency">20%以下</div>
@@ -61,8 +64,8 @@
             <li>口罩地圖的更新紀錄：<a href="https://github.com/chengkai505/Mask-Map/commits/master">ChangeLog</a></li>
             <li>口罩地圖的原始碼：<a href="https://github.com/chengkai505/Mask-Map/">GitHub</a></li>
             <img src="Maskimage/m1.png" alt="">
-        </ul>
-        <div class="copyright">Copyright 2020 by <a href="https://www.facebook.com/kai73002981">Kai Wu</a></div>
+        </ul> -->
+        <div class="copyright">Copyright 2020 by Anny Huang</a></div>
     </div>
     <div id="map"></div>
 
