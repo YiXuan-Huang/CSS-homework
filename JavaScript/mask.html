@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
-    
+
     <script src="https://kit.fontawesome.com/05c128ff7b.js" crossorigin="anonymous"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
@@ -60,6 +60,7 @@
             <li>填寫的資料會不定期匯出到：<a href="https://pse.is/QDSMW" target="_blank">https://pse.is/QDSMW</a></li>
             <li>口罩地圖的更新紀錄：<a href="https://github.com/chengkai505/Mask-Map/commits/master">ChangeLog</a></li>
             <li>口罩地圖的原始碼：<a href="https://github.com/chengkai505/Mask-Map/">GitHub</a></li>
+            <img src="Maskimage/m1.png" alt="">
         </ul>
         <div class="copyright">Copyright 2020 by <a href="https://www.facebook.com/kai73002981">Kai Wu</a></div>
     </div>
@@ -68,11 +69,11 @@
 
     <script>
         // let map;
-        
+
 
         function initMap(maskObject) {
 
-            
+
 
 
             var Mask = maskObject;
@@ -125,13 +126,13 @@
                     marker = new google.maps.Marker({
                         position: new google.maps.LatLng(myLat[i], myLng[i]),
                         map: map,
-                        icon: 'images/sad.png'
+                        icon: 'Maskimage/sad.png'
                     });
                 } else {
                     marker = new google.maps.Marker({
                         position: new google.maps.LatLng(myLat[i], myLng[i]),
                         map: map,
-                        icon: 'images/smile.png'
+                        icon: 'Maskimage/smile.png'
                     });
                 }
 
@@ -170,31 +171,41 @@
 
             }
 
-            
-            var markerCluster = new MarkerClusterer(map, gmarkers);
 
-
-
-
-
+            // var markerCluster = new MarkerClusterer(map, gmarkers);
+            var clusterStyles = [{
+                    height: 53,
+                    url: '//ccplugins.co/markerclusterer/images/m1.png',
+                    width: 53,
+                },
+                {
+                    height: 56,
+                    url: '//ccplugins.co/markerclusterer/images/m2.png',
+                    width: 56,
+                },
+                {
+                    height: 66,
+                    url: '//ccplugins.co/markerclusterer/images/m3.png',
+                    width: 66,
+                },
+                {
+                    height: 78,
+                    url: '//ccplugins.co/markerclusterer/images/m4.png',
+                    width: 78,
+                },
+                {
+                    height: 90,
+                    url: '//ccplugins.co/markerclusterer/images/m5.png',
+                    width: 90,
+                },
+            ];
+            var clusterOptions = {
+                styles: clusterStyles
+            };
+            // Add a marker clusterer to manage the markers.
+            var markerCluster = new MarkerClusterer(map, gmarkers, clusterOptions);
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
