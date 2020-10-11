@@ -43,24 +43,24 @@
                 <button onclick="btnPreMonth()"><i class="fas fa-angle-left"></i></button>
             </div>
             <!-- <h1 class="text-center text-white p-2">8月,2020</h1> -->
-            <h1 class="text-center text-white p-2">8月,2020</h1>
+            <h1 class="text-center text-white p-2"></h1>
             <div class="btnNext">
                 <button onclick="btnNextMonth()"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <table class="w-100 text-center" border="1">
-                <thead>
-                    <tr>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thr</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                        <th>Sun</th>
-                    </tr>
-                </thead>
+
         </div>
-    
+        <table class="w-100 text-center" border="1">
+            <thead>
+                <tr>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thr</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
             <!-- <tbody>
                 <tr>
                     <td class="td test" data-toggle="modal" data-target="#exampleModal" onclick="what(this)">123</td>
@@ -318,7 +318,7 @@
                                 contentshowtextarea.value = JSON.parse(localStorage.getItem(el.id))[j]
                                     .Content
                                 console.log(p.getAttribute('index'))
-                            
+
 
                                 //刪除
                                 let deletebtn = document.querySelector('#exampleModal .delete')
@@ -334,33 +334,36 @@
                                     CreateCalendar()
                                     ShowSchedule();
                                     ShowHeight()
-                                    
+
                                 }
 
 
                                 //修改
                                 let editbtn = document.querySelector('#exampleModal .edit')
-                                editbtn.onclick = function(){
+                                editbtn.onclick = function () {
                                     // titleshowinputtxt.value=
                                     // document.querySelector('#exampleModal input').value
                                     // titleshowinputtxt.value=
                                     // contentshowtextarea.value
                                     let elid = document.getElementById('name').innerText
                                     let items = JSON.parse(localStorage.getItem(elid))
-                                    
+
                                     // JSON.parse(localStorage.getItem(elid))[j]//變成陣列型態
                                     // JSON.parse(localStorage.getItem(elid))[j].title='111111111111'
-                                    items[j]={title:titleshowinputtxt.value ,Content:contentshowtextarea.value}
+                                    items[j] = {
+                                        title: titleshowinputtxt.value,
+                                        Content: contentshowtextarea.value
+                                    }
                                     // titleshowinputtxt.value
-                                    localStorage.setItem(elid,JSON.stringify(items))
+                                    localStorage.setItem(elid, JSON.stringify(items))
                                     CreateCalendar()
                                     ShowSchedule();
                                     ShowHeight()
-                                    
+
                                 }
-                                
+
                             })
-                            
+
                         }
 
                     }
@@ -406,7 +409,7 @@
             let titleshowinputtxt = document.querySelector('#exampleModal input')
             let contentshowtextarea = document.querySelector('#exampleModal textarea')
 
-        
+
 
 
 
