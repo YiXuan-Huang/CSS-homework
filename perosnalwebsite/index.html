@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Resume - Start Bootstrap Theme</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          background-color: #f1f1f1;
+          padding: 20px;
+          font-family: Arial;
+        }
+        
+        /* Center website */
+        .main {
+          max-width: 1000px;
+          margin: auto;
+        }
+        
+        h1 {
+          font-size: 50px;
+          word-break: break-all;
+        }
+        
+        .row {
+          margin: 8px -16px;
+        }
+        
+        /* Add padding BETWEEN each column */
+        .row,
+        .row > .column {
+          padding: 8px;
+        }
+        
+        /* Create four equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 25%;
+        }
+        
+        /* Clear floats after rows */ 
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Content */
+        .content {
+          background-color: white;
+          padding: 10px;
+        }
+        
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 900px) {
+          .column {
+            width: 50%;
+          }
+        }
+        
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column {
+            width: 100%;
+          }
+        }
+        </style>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Clarence Taylor</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    src="https://i.imgur.com/6Lc5qpo.jpg" alt="" /></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li> -->
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">CSS HomeWork</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">JavaScript HomeWork</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        <section class="resume-section" id="about">
+            <div class="resume-section-content">
+                <h2 class="mb-0">
+                    黃
+                    <span class="text-primary">怡瑄</span>
+                </h2>
+                <div class="subheading mb-5">
+                    新北市板橋區
+                    <!-- <a href="mailto:anny263134200@gmail.com">anny263134200@gmail.com</a> -->
+                </div>
+                <p class="lead mb-5">
+                    資訊管理學系畢業，為了增進自己的技術能力，畢業後選擇參加Build School 軟體開發培訓，長達4個月的前後端程式訓練，每天花至少10小時大量練習，使用ASP.NET
+                    MVC技術，完成電商網站專案，並透過Git版控及Trello協同開發，並能使用HTML/CSS、Bootstrap、JavaScript和C#完成網頁開發。
+                </p>
+                <div class="social-icons">
+                    <a class="social-icon" href="mailto:anny263134200@gmail.com"><i class="fas fa-envelope"></i></i></a>
+                    <!-- <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a> -->
+                    <!-- <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a> -->
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Experience-->
+        <!-- <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Build School 程式開發培訓班</h3>
+                            <ul>
+                                <li>6/1-6/23 學習C#及物件導向</li>
+                                <li>6/24-7/9 學習HTML、CSS、Bootstrap、RWD </li>
+                                <li>7/13-7/30 學習Javascript、jQuery </li>
+                                <li>8/3-8/12 學習MSSQL </li>
+                                <li>8/13-8/21學習ASP.NET MVC框架</li>
+                              </ul>  
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary"> 2020/06月-至今</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">中國文化大學 </h3>
+                            <ul>
+                                <li>2019：全班第三名畢業</li>
+                                <li>2018：商學院四系聯合歌唱大賽【第三名】 </li>
+                                <li>2018：銘傳大學吉他社舉辦之銘音獎獨唱組【第二名】 </li>
+                                <li>2018：銘傳大學吉他社舉辦之銘音獎團體組【第二名】</li>
+                                <li>2017：獲頒班級第三名書卷獎 </li>
+                                <li>2017：資訊管理學系系學會擔任【執行秘書】 </li>
+                                <li>2017：華岡吉他社擔任【教學】</li>
+                                <li>2016：獲頒班級第二名書卷獎</li>
+                            </ul>
+                    
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2015/9月-2019/3月</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">台灣酷樂時代MyMusic，台灣大哥大子公司</h3>
+                            <ul>
+                                <li>熟悉智慧型手機(Android or iPhone)操作，並且經常下載各種App，測試音樂軟體App功能  </li>
+                                <li>協助產品功能測試</li>
+                                <li>整理回報測試結果</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2019/5月-2019/11月</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">台灣飛利浦股份有限公司</h3>
+                           
+                            <ul>
+                                <li>熟稔的展示銷售技巧</li>
+                                <li>對公司產品有強烈信心</li>
+                                <li>對產品有高度的銷售熱誠</li>
+                                <li>能努力達成公司訂定的銷售目標</li>
+                                <li>能自我獨立作業</li>
+                            </ul>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">2017/7月-2017/8月</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" /> -->
+        <!-- Education-->
+        <!-- <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Colorado Boulder</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>Computer Science - Web Development Track</div>
+                            <p>GPA: 3.23</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">James Buchanan High School</h3>
+                            <div class="subheading mb-3">Technology Magnet Program</div>
+                            <p>GPA: 3.56</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" /> -->
+        <!-- Skills-->
+        <!-- <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Agile Development & Scrum
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" /> -->
+        <!-- Interests-->
+        <section class="resume-section" id="interests">
+            <div class="resume-section-content">
+                <h2>CSS HomeWork</h2>
+                <!-- Portfolio Gallery Grid -->
+                <div class="row">
+                    <div class="column">
+                        <div class="content">
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/table.html" target="_blank">
+                            <img src="https://i.imgur.com/UX5gVv9.png" alt="Mountains" style="width:100%"></a>
+                            <h3>國小課表</h3>
+                            <p>利用table模擬課表</p>
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/table.html" target="_blank">作品連結</a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="content">
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/homework.html" target="_blank">
+                            <img src="https://i.imgur.com/0fQdNyU.png" style="width:100%">
+                            </a><h3>HTML/CSS切版練習</h3>
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/homework.html" target="_blank">作品連結</a>
+                            <p>參考
+                                <a href="http://template73996.motopreview.com/" class="text-decoration-none" target="_blank">網站</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="content">
+                            
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/homework02-1-Naturio.html" target="_blank"><img src="https://i.imgur.com/OtK2kaG.png" alt="Nature" style="width:100%"></a>
+                            <h3>HTML/CSS切版練習</h3>
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/homework02-1-Naturio.html" target="_blank">作品連結</a>
+                            <p>參考
+                                
+                                <a href="https://ld-wp.template-help.com/woocommerce_prod-11619_v1" class="text-decoration-none" target="_blank">網站</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="content">
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/03-7.html" target="_blank">
+                            <img src="https://i.imgur.com/wC9w70o.png" alt="Mountains" style="width:100%"></a>
+                            <h3>絕對定位練習</h3>
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/03-7.html" target="_blank">作品連結</a>
+                            <p>參考
+                                
+                                <a href="https://www.toyota.com.tw/tech_TNGA.aspx#/advantages" class="text-decoration-none" target="_blank">網站</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="content">
+                            
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/homework04-2-buildschoolweb-RWD.html" target="_blank"><img src="https://i.imgur.com/PeJweii.png" alt="Nature" style="width:100%"></a>
+                            <h3>RWD練習</h3>
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/homework04-2-buildschoolweb-RWD.html" target="_blank">作品連結</a>
+                            <p>參考
+                                
+                                <a href="https://www.build-school.com/" target="_blank">網站</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="content">
+                            
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/HW.html" target="_blank"><img src="https://i.imgur.com/U9C57G0.png" alt="Nature" style="width:100%"></a>
+                            <h3>Bootstrap練習</h3>
+                            <a href="https://amos-htmlcss-anny.azurewebsites.net/HW.html" target="_blank">作品連結</a>
+                            <p>參考
+                                
+                                <a href="http://taken.co.kr/" target="_blank">網站</a>
+                            </p>
+                        </div>
+                    <!-- END GRID -->
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Awards-->
+        <section class="resume-section" id="awards">
+            <div class="resume-section-content">
+                <h2 class="mb-5">JavaScipt HomeWork</h2>
+                <div class="column">
+                    <div class="content">
+                        
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/CovidTable.html" target="_blank"><img src="https://i.imgur.com/AXvosiq.png" alt="Nature" style="width:100%"></a>
+                        <h3>肺炎資料表</h3>
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/CovidTable.html" target="_blank">作品連結</a>
+                        <p>建立肺炎資料結構，讀取HTML元素，以innerText或innerHTML設定資料，並計算[全球統計數]
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content">
+                        
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/guessnumber.html" target="_blank"><img src="https://i.imgur.com/FLS8a5s.png" alt="Nature" style="width:100%"></a>
+                        <h3>猜數字1A2B</h3>
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/guessnumber.html" target="_blank">作品連結</a>
+                        <p>建立肺炎資料結構，讀取HTML元素，以innerText或innerHTML設定資料，並計算[全球統計數]
+                        </p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content">
+                        
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/NewApple.htmll" target="_blank"><img src="https://i.imgur.com/bN4zGEw.png" alt="Nature" style="width:100%"></a>
+                        <h3>資料結構與DOM操作</h3>
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/NewApple.html" target="_blank">作品連結</a>
+                        <p>資料結構與DOM操作模仿Apple官網
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="content">
+                        
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/mask.html" target="_blank"><img src="https://i.imgur.com/7bFpMtt.png" alt="Nature" style="width:100%"></a>
+                        <h3>口罩地圖</h3>
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/mask.html" target="_blank">作品連結</a>
+                        <p>透過XMLHttpRequest取得Response ，串接Google map API，將資料輸入至地圖內，點擊圖示即可顯示診所口罩庫存數量，並依據診所區域數量做不同顏色的分群 。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="content">
+                        
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/Calendar.html" target="_blank"><img src="https://i.imgur.com/kxOWcLH.png" alt="Nature" style="width:100%"></a>
+                        <h3>行事曆</h3>
+                        <a href="https://amos-htmlcss-anny.azurewebsites.net/JavaScript/Calendar.html" target="_blank">作品連結</a>
+                        <p>Local Storage做資料存取，JavaScript動態生成每月日期，可新增、修改、刪除代辦事項
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
